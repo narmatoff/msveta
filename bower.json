@@ -1,0 +1,6 @@
+{
+  "name": "msveta",
+  "dependencies": {
+    "less.js": "~2.5.0"
+  }
+}

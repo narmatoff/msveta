@@ -6,7 +6,7 @@ body {
 }
 body .bgimg {
   position: absolute;
-  top: 180px;
+  top: 6.9%;
   background: url(images/bgimg.png);
   height: 480px;
   width: 100%;
@@ -100,8 +100,23 @@ body .mn_wpr header .maglink_nphone a {
   -moz-justify-content: space-around;
   -ms-justify-content: space-around;
   justify-content: space-around;
-  -webkit-flex-basis: 200px;
-  -moz-flex-basis: 200px;
-  -ms-flex-basis: 200px;
-  flex-basis: 200px;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-basis: 190px;
+  -moz-flex-basis: 190px;
+  -ms-flex-basis: 190px;
+  flex-basis: 190px;
+}
+body .mn_wpr header .maglink_nphone a:last-child {
+  text-decoration: none;
+}
+body .mn_wpr header .maglink_nphone a:last-child span {
+  color: #333333;
+  font-size: 17px;
+  font-weight: 700;
+}
+body .mn_wpr header .maglink_nphone a span {
+  color: inherit;
 }

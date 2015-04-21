@@ -30,13 +30,78 @@ body .mn_wpr header {
 }
 body .mn_wpr header nav {
   height: 69px;
-  width: 1160px;
-  margin: 0 auto;
+  width: 1260px;
+  margin: 0;
+  position: relative;
   border-bottom: 1px solid #d9d9d9;
 }
 body .mn_wpr header nav ul {
   list-style: none;
+  padding: 1.5em 0 0 0;
 }
 body .mn_wpr header nav ul li {
   display: inline-block;
+}
+body .mn_wpr header nav ul li:nth-child(1) {
+  float: left;
+  margin: 0 42px 0 50px;
+}
+body .mn_wpr header nav ul li:nth-child(1) a .logotipe {
+  display: block;
+  margin: 0 auto;
+}
+body .mn_wpr header nav ul li:nth-child(2) {
+  float: left;
+  margin: 0 45px 0 0;
+}
+body .mn_wpr header nav ul li:nth-child(3) {
+  float: left;
+  margin: 0;
+}
+body .mn_wpr header nav ul li:nth-child(4) {
+  float: right;
+  margin: 0 210px 0 42px;
+}
+body .mn_wpr header nav ul li:nth-child(5) {
+  float: right;
+  margin: 0 0 0 45px;
+}
+body .mn_wpr header nav ul li:nth-child(6) {
+  float: right;
+  margin: 0;
+}
+body .mn_wpr header nav a.logotipe {
+  position: absolute;
+  top: 0px;
+  left: 515px;
+  background-color: #ffffff;
+  padding: 0 47px 0 47px;
+}
+body .mn_wpr header .maglink_nphone {
+  margin: 21px 0 0 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  min-width: 1260px;
+}
+body .mn_wpr header .maglink_nphone a {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-flex-basis: 200px;
+  -moz-flex-basis: 200px;
+  -ms-flex-basis: 200px;
+  flex-basis: 200px;
 }

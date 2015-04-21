@@ -36,8 +36,10 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 15px;
-	font: inherit;
+	color: #333333;
+font-size: 15px;
+font-weight: 400;
+line-height: 24px;
 	vertical-align: baseline;
 	font-family: proxima_nova_rgregular;
 }
@@ -68,20 +70,13 @@ table {
 
 
 /*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
-
-html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
-
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #79b021;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #79b021;
     text-shadow: none;
 }
 
@@ -234,9 +229,9 @@ template {
 a {
   	background-color: transparent;
 	color: #1075c2;
-	text-decoration: none;
+	text-decoration: underline;
 	display: inline-block;
-	border-bottom: 1px solid #1075c2;
+/*	border-bottom: 1px solid #1075c2;*/
 
 }
 
@@ -247,7 +242,8 @@ a {
 a:active,
 a:hover {
  	outline: 0;
-	border: 0 ;
+/*	border-bottom: 1px solid transparent;*/
+	text-decoration: none
 }
 
 /* Text-level semantics

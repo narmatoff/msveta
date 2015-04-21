@@ -338,10 +338,36 @@ body {
                 }
             }
             aside {
-                .flex-basis(@width: 440px;
-                );
+                .flex-basis(@width: 440px);
                 outline: 1px dotted red;
-                //				width: 23.2%;
+
+                .aside_flexslider {
+                    .flex-display(@display: flex);
+                    .flex-basis(@width: 100%);
+                    .justify-content(@justify: center);
+                    .align-items(@align: center);
+
+                    .slides {
+
+
+
+
+
+
+
+                    }
+
+                                                .flex-control-nav{
+                                                    .flex-display(@display: flex);
+                                                    .align-items(@align: center);
+
+                            }
+                            .flex-direction-nav{
+                                .flex-display(@display: flex);
+                                .align-items(@align: center);
+
+                            }
+                }
             }
             div.contacts {
                 .flex-basis(@width: 100%);
@@ -356,3 +382,5 @@ body {
         ////////////////////////////////////////////////////////
     }
 }
+
+

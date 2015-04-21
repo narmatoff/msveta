@@ -199,6 +199,47 @@ body .mn_wpr .sec_wrp aside {
   flex-basis: 440px;
   outline: 1px dotted red;
 }
+body .mn_wpr .sec_wrp aside .aside_flexslider {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-basis: 100%;
+  -moz-flex-basis: 100%;
+  -ms-flex-basis: 100%;
+  flex-basis: 100%;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+body .mn_wpr .sec_wrp aside .aside_flexslider .flex-control-nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+body .mn_wpr .sec_wrp aside .aside_flexslider .flex-direction-nav {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
 body .mn_wpr .sec_wrp div.contacts {
   -webkit-flex-basis: 100%;
   -moz-flex-basis: 100%;

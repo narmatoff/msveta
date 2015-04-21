@@ -6,7 +6,10 @@ $(document).ready(function() {
     animation: "slide"
   });
 
-
+//    aside_flexslider
+    $('.aside_flexslider').flexslider({
+    animation: "fade"
+  });
 
 
 });

@@ -7,7 +7,6 @@
 //
 //@fontFamReg: proxima_nova_rgregular;
 //@fontFamBold: proxima_nova_rgbold;
-
 // linear transition
 .linear_transitions(@ms: .1s) {
 	-webkit-transition: ~"all @{ms} linear";
@@ -175,20 +174,18 @@ body {
 		top: 0;
 		width: 1260px;
 		min-width: 1260px;
-		height: 100%;
+		min-height: 100%;
 		margin: 0 auto;
 		background-color: #ffffff;
 		-webkit-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
 		-moz-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
 		box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
-
 		header {
 			height: 280px;
 			width: 100%;
 			// outline: 1px dotted blue;
-
 			/////////////////////////////
-//			top_navigation//////////////
+			//			top_navigation//////////////
 			////////////////////////////
 			nav {
 				height: 69px;
@@ -197,15 +194,12 @@ body {
 				position: relative;
 				//				outline: 1px dotted red;
 				border-bottom: 1px solid @mainGrayColor;
-
 				ul {
 					list-style: none;
 					//					outline: 1px dotted red;
 					padding: 1.5em 0 0 0;
-
 					li {
 						display: inline-block;
-
 						&:nth-child(1) {
 							float: left;
 							margin: 0 42px 0 0;
@@ -252,10 +246,8 @@ body {
 				}
 			}
 			/////////////////////////////
-//			end_top_navigation//////////////
+			//			end_top_navigation//////////////
 			////////////////////////////
-
-
 			.maglink_nphone {
 				margin: 21px 0 0 0;
 				// flex or inline-flex
@@ -278,7 +270,7 @@ body {
 						span {
 							color: @mainTextColor;
 							font-size: 17px;
-//							font-weight: 700;
+							//							font-weight: 700;
 							font-family: proxima_nova_rgbold;
 						}
 					}
@@ -288,7 +280,6 @@ body {
 					}
 				}
 			}
-
 			.nametitle {
 				// flex or inline-flex
 				.flex-display(@display: flex);
@@ -297,13 +288,12 @@ body {
 				.align-items(@align: center);
 				margin: 50px 0 0 0;
 				min-width: 1260px;
-
 				span {
 					&:first-child {
 						color: @mainLTextColor;
 						font-size: 3.1em;
 						font-family: proxima_nova_rgbold;
-//						font-weight: bold;
+						//						font-weight: bold;
 						margin: 0 18px 20px 18px;
 					}
 					&:last-child {
@@ -319,5 +309,36 @@ body {
 			overflow: hidden;
 			border-bottom: 2px solid #79b021;
 		}
+		////////////////////////////////////////////////////////
+		//		second wrapper
+		.sec_wrp {
+			width: 1160px;
+			margin: 60px auto;
+			// flex or inline-flex
+			.flex-display(@display: flex);
+			// flex-start | flex-end | center | space-between | space-around
+			.justify-content(@justify: space-between);
+
+			section {
+				outline: 1px dotted red;
+
+				.heading {
+					.flex-basis(@width: 100%);
+
+					span {
+
+					}
+				}
+			}
+			aside {
+				//				width: 23.2%;
+			}
+			div.contacts {
+				.flex-basis(@width: 100%);
+			}
+		}
+		//		end second wrapper
+		////////////////////////////////////////////////////////
+		footer {}
 	}
 }

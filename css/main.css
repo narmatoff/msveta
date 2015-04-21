@@ -30,7 +30,7 @@ body .mn_wpr header {
 }
 body .mn_wpr header nav {
   height: 69px;
-  width: 1160px;
+  width: 61.1%;
   margin: 0 auto;
   position: relative;
   border-bottom: 1px solid #d9d9d9;
@@ -148,8 +148,18 @@ body .mn_wpr header .nametitle span:last-child {
   font-size: 1.3em;
 }
 body .mn_wpr .main_flexslider {
-  width: 1160px;
+  width: 61.1%;
   margin: 0 auto;
   overflow: hidden;
   border-bottom: 2px solid #79b021;
+}
+body .mn_wpr .sec_wrp {
+  width: 61.1%;
+}
+body .mn_wpr .sec_wrp section {
+  width: 33.7%;
+  outline: 1px dotted red;
+}
+body .mn_wpr .sec_wrp aside {
+  width: 23.2%;
 }

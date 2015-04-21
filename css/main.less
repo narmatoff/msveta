@@ -11,11 +11,6 @@
 	-ms-transition: ~"all @{ms} linear"; // IE10 uses -ms-flexbox
 	-o-transition: ~"all @{ms} linear"; // IE11
 	transition: ~"all @{ms} linear";
-	//	    -webkit-transition: all .1s linear;
-	//       -moz-transition: all .1s linear;
-	//        -ms-transition: all .1s linear;
-	//         -o-transition: all .1s linear;
-	//            transition: all .1s linear;
 }
 
 // --------------------------------------------------
@@ -174,21 +169,23 @@ body {
 		//		outline: 1px dotted red;
 		position: relative;
 		top: 0;
-		max-width: 1260px;
+		width: 1260px;
+		min-width: 1260px;
 		height: 100%;
 		margin: 0 auto;
 		background-color: #ffffff;
 		-webkit-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
 		-moz-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
 		box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
+
 		header {
 			height: 280px;
 			width: 100%;
-			outline: 1px dotted blue;
+			// outline: 1px dotted blue;
 			nav {
 				height: 69px;
-				width: 1260px;
-				margin: 0;
+				width: 1160px;
+				margin: 0 auto;
 				position: relative;
 				//				outline: 1px dotted red;
 				border-bottom: 1px solid @mainGrayColor;
@@ -200,7 +197,7 @@ body {
 						display: inline-block;
 						&:nth-child(1) {
 							float: left;
-							margin: 0 42px 0 50px;
+							margin: 0 42px 0 0;
 							a {
 								.logotipe {
 									display: block;
@@ -220,7 +217,7 @@ body {
 						}
 						&:nth-child(4) {
 							float: right;
-							margin: 0 210px 0 42px;
+							margin: 0 160px 0 42px;
 							a {}
 						}
 						&:nth-child(5) {
@@ -238,7 +235,7 @@ body {
 				a.logotipe {
 					position: absolute;
 					top: 0px;
-					left: 515px;
+					left: 464px;
 					background-color: #ffffff;
 					padding: 0 47px 0 47px;
 				}
@@ -281,6 +278,7 @@ body {
 				.flex-direction(@direction: column);
 				.align-items(@align: center);
 				margin: 35px 0 0 0;
+				min-width: 1260px;
 				span {
 					&:first-child {
 						color: @mainLTextColor;
@@ -295,8 +293,15 @@ body {
 				}
 			}
 		}
-		//		p {
-		//			color: @mainTextColor;
-		//		}
+
+		.main_flexslider{
+
+			width:1160px;
+			margin:0 auto;
+			overflow:hidden;
+
+		}
+
+
 	}
 }

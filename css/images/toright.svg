@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	width="50px" height="128px">
+<clipPath id="clip0">
+<use xlink:href="#symbol0"/>
+</clipPath>
+<defs>
+<path id="symbol0" fill-rule="evenodd" d="M 23.57 80.25C 24.49 80.25 25.41 79.9 26.11 79.21 26.11 79.21 38.96 66.48 38.96 66.48 40.35 65.11 40.35 62.89 38.96 61.52 38.96 61.52 26.11 48.79 26.11 48.79 24.72 47.41 22.45 47.4 21.05 48.77 19.66 50.14 19.65 52.36 21.04 53.74 21.04 53.74 31.39 64 31.39 64 31.39 64 21.04 74.26 21.04 74.26 19.65 75.64 19.66 77.86 21.05 79.23 21.75 79.91 22.66 80.25 23.57 80.25Z"/>
+</defs>
+<path opacity="0.70" fill="rgb(0,0,0)" fill-rule="evenodd" d="M 50 128.04C 21.28 120.88-0 94.93-0 64-0 33.07 21.28 7.12 50-0.04 50-0.04 50 128.04 50 128.04Z"/>
+<g>
+<use xlink:href="#symbol0" fill="rgb(255,255,255)"/>
+<use clip-path="url(#clip0)" xlink:href="#symbol0" fill="none" stroke="rgb(0,0,0)" stroke-width="2.00px"/>
+</g>
+</svg>

@@ -231,7 +231,12 @@ a {
 	color: #1075c2;
 	text-decoration: underline;
 	display: inline-block;
-/*	border-bottom: 1px solid #1075c2;*/
+
+  -webkit-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -ms-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
 
 }
 

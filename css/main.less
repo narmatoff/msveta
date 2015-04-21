@@ -4,6 +4,10 @@
 @mainGrayColor: #d9d9d9;
 @mainOrangeColor: #ff8e35;
 @mainLinkColor: #1075c2;
+//
+//@fontFamReg: proxima_nova_rgregular;
+//@fontFamBold: proxima_nova_rgbold;
+
 // linear transition
 .linear_transitions(@ms: .1s) {
 	-webkit-transition: ~"all @{ms} linear";
@@ -182,6 +186,10 @@ body {
 			height: 280px;
 			width: 100%;
 			// outline: 1px dotted blue;
+
+			/////////////////////////////
+//			top_navigation//////////////
+			////////////////////////////
 			nav {
 				height: 69px;
 				width: 1160px;
@@ -189,12 +197,15 @@ body {
 				position: relative;
 				//				outline: 1px dotted red;
 				border-bottom: 1px solid @mainGrayColor;
+
 				ul {
 					list-style: none;
 					//					outline: 1px dotted red;
 					padding: 1.5em 0 0 0;
+
 					li {
 						display: inline-block;
+
 						&:nth-child(1) {
 							float: left;
 							margin: 0 42px 0 0;
@@ -240,6 +251,11 @@ body {
 					padding: 0 47px 0 47px;
 				}
 			}
+			/////////////////////////////
+//			end_top_navigation//////////////
+			////////////////////////////
+
+
 			.maglink_nphone {
 				margin: 21px 0 0 0;
 				// flex or inline-flex
@@ -262,7 +278,8 @@ body {
 						span {
 							color: @mainTextColor;
 							font-size: 17px;
-							font-weight: 700;
+//							font-weight: 700;
+							font-family: proxima_nova_rgbold;
 						}
 					}
 					img {}
@@ -271,19 +288,22 @@ body {
 					}
 				}
 			}
+
 			.nametitle {
 				// flex or inline-flex
 				.flex-display(@display: flex);
 				// row | row-reverse | column | column-reverse
 				.flex-direction(@direction: column);
 				.align-items(@align: center);
-				margin: 35px 0 0 0;
+				margin: 50px 0 0 0;
 				min-width: 1260px;
+
 				span {
 					&:first-child {
 						color: @mainLTextColor;
-						font-size: 3em;
-						font-weight: bold;
+						font-size: 3.1em;
+						font-family: proxima_nova_rgbold;
+//						font-weight: bold;
 						margin: 0 18px 20px 18px;
 					}
 					&:last-child {
@@ -293,15 +313,11 @@ body {
 				}
 			}
 		}
-
-		.main_flexslider{
-
-			width:1160px;
-			margin:0 auto;
-			overflow:hidden;
-
+		.main_flexslider {
+			width: 1160px;
+			margin: 0 auto;
+			overflow: hidden;
+			border-bottom: 2px solid #79b021;
 		}
-
-
 	}
 }

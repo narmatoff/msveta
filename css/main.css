@@ -15,7 +15,8 @@ body .bgimg {
 body .mn_wpr {
   position: relative;
   top: 0;
-  max-width: 1260px;
+  width: 1260px;
+  min-width: 1260px;
   height: 100%;
   margin: 0 auto;
   background-color: #ffffff;
@@ -26,12 +27,11 @@ body .mn_wpr {
 body .mn_wpr header {
   height: 280px;
   width: 100%;
-  outline: 1px dotted blue;
 }
 body .mn_wpr header nav {
   height: 69px;
-  width: 1260px;
-  margin: 0;
+  width: 1160px;
+  margin: 0 auto;
   position: relative;
   border-bottom: 1px solid #d9d9d9;
 }
@@ -44,7 +44,7 @@ body .mn_wpr header nav ul li {
 }
 body .mn_wpr header nav ul li:nth-child(1) {
   float: left;
-  margin: 0 42px 0 50px;
+  margin: 0 42px 0 0;
 }
 body .mn_wpr header nav ul li:nth-child(1) a .logotipe {
   display: block;
@@ -60,7 +60,7 @@ body .mn_wpr header nav ul li:nth-child(3) {
 }
 body .mn_wpr header nav ul li:nth-child(4) {
   float: right;
-  margin: 0 210px 0 42px;
+  margin: 0 160px 0 42px;
 }
 body .mn_wpr header nav ul li:nth-child(5) {
   float: right;
@@ -73,7 +73,7 @@ body .mn_wpr header nav ul li:nth-child(6) {
 body .mn_wpr header nav a.logotipe {
   position: absolute;
   top: 0px;
-  left: 515px;
+  left: 464px;
   background-color: #ffffff;
   padding: 0 47px 0 47px;
 }
@@ -115,8 +115,41 @@ body .mn_wpr header .maglink_nphone a:last-child {
 body .mn_wpr header .maglink_nphone a:last-child span {
   color: #333333;
   font-size: 17px;
-  font-weight: 700;
+  font-family: proxima_nova_rgbold;
 }
 body .mn_wpr header .maglink_nphone a span {
   color: inherit;
+}
+body .mn_wpr header .nametitle {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: 50px 0 0 0;
+  min-width: 1260px;
+}
+body .mn_wpr header .nametitle span:first-child {
+  color: #666666;
+  font-size: 3.1em;
+  font-family: proxima_nova_rgbold;
+  margin: 0 18px 20px 18px;
+}
+body .mn_wpr header .nametitle span:last-child {
+  color: #333333;
+  font-size: 1.3em;
+}
+body .mn_wpr .main_flexslider {
+  width: 1160px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-bottom: 2px solid #79b021;
 }

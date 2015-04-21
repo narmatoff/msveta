@@ -6,7 +6,7 @@ body {
 }
 body .bgimg {
   position: absolute;
-  top: 180px;
+  top: 6.9%;
   background: url(images/bgimg.png);
   height: 480px;
   width: 100%;
@@ -15,7 +15,8 @@ body .bgimg {
 body .mn_wpr {
   position: relative;
   top: 0;
-  max-width: 1260px;
+  width: 1260px;
+  min-width: 1260px;
   height: 100%;
   margin: 0 auto;
   background-color: #ffffff;
@@ -26,17 +27,139 @@ body .mn_wpr {
 body .mn_wpr header {
   height: 280px;
   width: 100%;
-  outline: 1px dotted blue;
 }
 body .mn_wpr header nav {
   height: 69px;
-  width: 1160px;
+  width: 61.1%;
   margin: 0 auto;
+  position: relative;
   border-bottom: 1px solid #d9d9d9;
 }
 body .mn_wpr header nav ul {
   list-style: none;
+  padding: 1.5em 0 0 0;
 }
 body .mn_wpr header nav ul li {
   display: inline-block;
+}
+body .mn_wpr header nav ul li:nth-child(1) {
+  float: left;
+  margin: 0 42px 0 0;
+}
+body .mn_wpr header nav ul li:nth-child(1) a .logotipe {
+  display: block;
+  margin: 0 auto;
+}
+body .mn_wpr header nav ul li:nth-child(2) {
+  float: left;
+  margin: 0 45px 0 0;
+}
+body .mn_wpr header nav ul li:nth-child(3) {
+  float: left;
+  margin: 0;
+}
+body .mn_wpr header nav ul li:nth-child(4) {
+  float: right;
+  margin: 0 160px 0 42px;
+}
+body .mn_wpr header nav ul li:nth-child(5) {
+  float: right;
+  margin: 0 0 0 45px;
+}
+body .mn_wpr header nav ul li:nth-child(6) {
+  float: right;
+  margin: 0;
+}
+body .mn_wpr header nav a.logotipe {
+  position: absolute;
+  top: 0px;
+  left: 464px;
+  background-color: #ffffff;
+  padding: 0 47px 0 47px;
+}
+body .mn_wpr header .maglink_nphone {
+  margin: 21px 0 0 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  min-width: 1260px;
+}
+body .mn_wpr header .maglink_nphone a {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-flex-basis: 190px;
+  -moz-flex-basis: 190px;
+  -ms-flex-basis: 190px;
+  flex-basis: 190px;
+}
+body .mn_wpr header .maglink_nphone a:last-child {
+  text-decoration: none;
+}
+body .mn_wpr header .maglink_nphone a:last-child span {
+  color: #333333;
+  font-size: 17px;
+  font-family: proxima_nova_rgbold;
+}
+body .mn_wpr header .maglink_nphone a span {
+  color: inherit;
+}
+body .mn_wpr header .nametitle {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  margin: 50px 0 0 0;
+  min-width: 1260px;
+}
+body .mn_wpr header .nametitle span:first-child {
+  color: #666666;
+  font-size: 3.1em;
+  font-family: proxima_nova_rgbold;
+  margin: 0 18px 20px 18px;
+}
+body .mn_wpr header .nametitle span:last-child {
+  color: #333333;
+  font-size: 1.3em;
+}
+body .mn_wpr .main_flexslider {
+  width: 61.1%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-bottom: 2px solid #79b021;
+}
+body .mn_wpr .sec_wrp {
+  width: 61.1%;
+}
+body .mn_wpr .sec_wrp section {
+  width: 33.7%;
+  outline: 1px dotted red;
+}
+body .mn_wpr .sec_wrp aside {
+  width: 23.2%;
 }

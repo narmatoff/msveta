@@ -3,6 +3,30 @@
 @mainGrayColor: #d9d9d9;
 @mainOrangeColor: #ff8e35;
 @mainLinkColor: #1075c2;
+
+
+
+
+
+// linear transition
+.linear_transitions(@ms: .1s) {
+    -webkit-transition: ~"all @{ms} linear";
+    -moz-transition: ~"all @{ms} linear";
+    -ms-transition: ~"all @{ms} linear"; // IE10 uses -ms-flexbox
+    -o-transition: ~"all @{ms} linear"; // IE11
+    transition: ~"all @{ms} linear";
+
+//	    -webkit-transition: all .1s linear;
+//       -moz-transition: all .1s linear;
+//        -ms-transition: all .1s linear;
+//         -o-transition: all .1s linear;
+//            transition: all .1s linear;
+}
+
+
+
+
+
 // --------------------------------------------------
 // Flexbox LESS mixins
 // The spec: http://www.w3.org/TR/css3-flexbox
@@ -185,6 +209,9 @@ body {
                         display: inline-block;
 
                         a {
+							// linear transition
+
+
 
 
 

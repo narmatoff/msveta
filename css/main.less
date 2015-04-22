@@ -181,6 +181,7 @@ body {
 		min-width: 1260px;
 		min-height: 100%;
 		margin: 0 auto;
+		padding: 0 0 90px 0;
 		background-color: #ffffff;
 		-webkit-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
 		-moz-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
@@ -252,6 +253,17 @@ body {
 						background-color: #ffffff;
 						padding: 0 47px 0 47px;
 					}
+
+
+
+
+
+					/////////////////////////
+					.catalog{
+
+					}
+
+
 				}
 				/////////////////////////////
 				//			end_top_navigation//////////////
@@ -502,13 +514,84 @@ body {
 							color: #fff;
 						}
 					}
-					/////////////////////////////////
+				}
+				.head_add {
+					.flex-display(@display: flex);
+					.flex-flow(@flow: column nowrap);
+					div {
+						.flex-display(@display: flex);
+						.justify-content(@justify: space-between);
+						.align-content(@align: space-between);
+						.flex-grow(@grow: 1);
+						display: none;
+						display: inherit;
+//						&.active_head_add {
+//
+//						}
+						span {
+							.flex-basis(@width: 290px);
+							.flex-grow(@grow: 1);
+							padding: 0 54px 0 0;
+						}
+					}
+				}
+				/////////////////////////////
+				.map_block {
+					.flex-basis(@width: 100%);
+					min-height: 400px;
+					//					outline: 1px dotted red;
+					margin: 37px 0 0 0;
 				}
 			}
-			footer {
-				.flex-basis(@width: 100%);
-				outline: 1px dotted red;
-				margin: 60px 0 0 0;
+		}
+		footer {
+			.flex-display(@display: flex);
+			.flex-flow(@flow: row nowrap);
+			.flex-basis(@width: 100%);
+			.justify-content(@justify: space-between);
+			//				.align-content(@align: center);
+			height: 80px;
+			//				outline: 1px dotted red;
+			margin: 60px 0 0 0;
+			padding: 0 50px 0 50px;
+			background: @mainGreenColor;
+			ul {
+				.flex-display(@display: flex);
+				.flex-flow(@flow: row nowrap);
+				//				.flex-basis(@width: 100%);
+				.justify-content(@justify: center);
+				.align-items(@align: center);
+				&:first-child {
+					li {
+						.flex-display(@display: flex);
+						.flex-flow(@flow: row nowrap);
+						//				.flex-basis(@width: 100%);
+						.justify-content(@justify: center);
+						.align-items(@align: center);
+						margin: 0 54px 0 0;
+						img {
+							margin: 0 8px 0 0;
+						}
+						span {
+							color: #fff;
+						}
+					}
+				}
+				&:last-child {
+					li {
+						margin: 0 0 0 10px;
+						a {
+							img {
+								.linear_transitions(@ms: .1s)
+							}
+							&:hover {
+								img {
+									opacity: 0.8;
+								}
+							}
+						}
+					}
+				}
 			}
 		}
 		//		end second wrapper

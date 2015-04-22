@@ -12,4 +12,18 @@ $(document).ready(function () {
 	});
 
 
+	//закладки регионов на галвной
+	$(".head_add div").hide(); // Скрываем содержание
+	$(".heading div:first").attr("class", "active_btn"); // Активируем первую закладку
+	$(".head_add div:first").fadeIn(); // Выводим содержание
+
+	$('.heading div').click(function (e) {
+		e.preventDefault();
+		$(".head_add div").hide(); //Скрыть все сожержание
+		$(".heading div").attr("class", ""); //Сброс ID
+		$(this).attr("class", "active_btn"); // Активируем закладку
+		$('#' + $(this).attr('title')).fadeIn(); // Выводим содержание текущей закладки
+	});
+
+
 });

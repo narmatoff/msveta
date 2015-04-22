@@ -329,13 +329,13 @@ body {
 				border-bottom: 2px solid #79b021;
 			}
 			section {
-//				outline: 1px dotted red;
+				//				outline: 1px dotted red;
 				// <width>
 				.flex-basis(@width: 640px);
 				margin: 60px 0 0 0;
 				.heading {
 					.flex-basis(@width: 100%);
-					border-bottom: 4px solid @mainGreenColor;
+					border-bottom: 3px solid @mainGreenColor;
 					padding: 0 0 10px 0;
 					margin: 0 0 30px 0;
 					span {
@@ -418,9 +418,8 @@ body {
 			}
 			aside {
 				.flex-basis(@width: 440px);
-//				outline: 1px dotted red;
+				//				outline: 1px dotted red;
 				margin: 60px 0 0 0;
-
 				.blog_b {
 					margin: 30px 0 0 0;
 					.flex-display(@display: flex);
@@ -428,36 +427,28 @@ body {
 					.flex-flow(@flow: column nowrap);
 					// flex-start | flex-end | center | baseline | stretch
 					.align-items(@align: stretch);
-					.flex-basis(@width:100%);
-
+					.flex-basis(@width: 100%);
 					li {
 						.flex-display(@display: flex);
-
 						// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
 						.flex-flow(@flow: row nowrap);
-
 						.justify-content(@justify: space-between);
-
-
 						margin: 0 0 40px 0;
-
 						&:nth-child(2n) {
 							// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
 							.flex-flow(@flow: row-reverse nowrap);
 						}
-
 						.text_items {
 							.flex-display(@display: flex);
 							// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
 							.flex-flow(@flow: column nowrap);
-							.flex-basis(@width:280px);
-
+							.flex-basis(@width: 280px);
 							h3 {
 								font-family: proxima_nova_rgbold;
 								font-size: 1.2em;
 								color: @mainHeadingColor;
 								margin: 0 0 19px 0;
-//								.flex-basis(@width:286px);
+								//								.flex-basis(@width:286px);
 							}
 							p {
 								font-size: 0.9em;
@@ -469,19 +460,50 @@ body {
 								line-height: 20px;
 							}
 						}
-
 						img {
 							width: 130px;
 							height: 130px;
-
 						}
 					}
 				}
 			}
 			div.contacts {
 				.flex-basis(@width: 100%);
-				outline: 1px dotted red;
+				//				outline: 1px dotted red;
 				margin: 60px 0 0 0;
+				.heading {
+					.flex-display(@display: flex);
+					.flex-basis(@width: 100%);
+					// flex-start | flex-end | center | baseline | stretch
+					.align-items(@align: baseline);
+					border-top: 1px solid @mainGrayColor;
+					border-bottom: 3px solid @mainGreenColor;
+					padding: 20px 0 0 0;
+					margin: 0 0 30px 0;
+					span {
+						font-size: 2.2em;
+						color: @mainHeadingColor;
+						margin: 0 54px 0 0
+					}
+					div {
+						height: 43px;
+						background: @mainGrayColor;
+						padding: 0 15px 0 15px;
+						margin: 0 11px 0 11px;
+						.flex-display(@display: flex);
+						.justify-content(@justify: center);
+						// flex-start | flex-end | center | baseline | stretch
+						.align-items(@align: center);
+						font: 1.1em proxima_nova_rgbold;
+						cursor: pointer;
+						&.active_btn {
+							background: @mainGreenColor;
+							height: 47px;
+							color: #fff;
+						}
+					}
+					/////////////////////////////////
+				}
 			}
 			footer {
 				.flex-basis(@width: 100%);

@@ -4,16 +4,17 @@
 @mainGrayColor: #d9d9d9;
 @mainOrangeColor: #ff8e35;
 @mainLinkColor: #1075c2;
+@mainHeadingColor: #4c4c4c;
 //
 //@fontFamReg: proxima_nova_rgregular;
 //@fontFamBold: proxima_nova_rgbold;
 // linear transition
 .linear_transitions(@ms: .1s) {
-    -webkit-transition: ~"all @{ms} linear";
-    -moz-transition: ~"all @{ms} linear";
-    -ms-transition: ~"all @{ms} linear"; // IE10 uses -ms-flexbox
-    -o-transition: ~"all @{ms} linear"; // IE11
-    transition: ~"all @{ms} linear";
+	-webkit-transition: ~"all @{ms} linear";
+	-moz-transition: ~"all @{ms} linear";
+	-ms-transition: ~"all @{ms} linear"; // IE10 uses -ms-flexbox
+	-o-transition: ~"all @{ms} linear"; // IE11
+	transition: ~"all @{ms} linear";
 }
 
 // --------------------------------------------------
@@ -23,71 +24,71 @@
 // Flexbox display
 // flex or inline-flex
 .flex-display(@display: flex) {
-    display: ~"-webkit-@{display}";
-    display: ~"-moz-@{display}";
-    display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
-    display: ~"-ms-@{display}"; // IE11
-    display: @display;
+	display: ~"-webkit-@{display}";
+	display: ~"-moz-@{display}";
+	display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
+	display: ~"-ms-@{display}"; // IE11
+	display: @display;
 }
 
 // Flex Flow Direction
 // - applies to: flex containers
 // row | row-reverse | column | column-reverse
 .flex-direction(@direction: row) {
-    -webkit-flex-direction: @direction;
-    -moz-flex-direction: @direction;
-    -ms-flex-direction: @direction;
-    flex-direction: @direction;
+	-webkit-flex-direction: @direction;
+	-moz-flex-direction: @direction;
+	-ms-flex-direction: @direction;
+	flex-direction: @direction;
 }
 
 // Flex Line Wrapping
 // - applies to: flex containers
 // nowrap | wrap | wrap-reverse
 .flex-wrap(@wrap: nowrap) {
-    -webkit-flex-wrap: @wrap;
-    -moz-flex-wrap: @wrap;
-    -ms-flex-wrap: @wrap;
-    flex-wrap: @wrap;
+	-webkit-flex-wrap: @wrap;
+	-moz-flex-wrap: @wrap;
+	-ms-flex-wrap: @wrap;
+	flex-wrap: @wrap;
 }
 
 // Flex Direction and Wrap
 // - applies to: flex containers
-// <flex-direction> || <flex-wrap>
+// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
 .flex-flow(@flow: row wrap) {
-    -webkit-flex-flow: @flow;
-    -moz-flex-flow: @flow;
-    -ms-flex-flow: @flow;
-    flex-flow: @flow;
+	-webkit-flex-flow: @flow;
+	-moz-flex-flow: @flow;
+	-ms-flex-flow: @flow;
+	flex-flow: @flow;
 }
 
 // Axis Alignment
 // - applies to: flex containers
 // flex-start | flex-end | center | space-between | space-around
 .justify-content(@justify: flex-start) {
-    -webkit-justify-content: @justify;
-    -moz-justify-content: @justify;
-    -ms-justify-content: @justify;
-    justify-content: @justify;
+	-webkit-justify-content: @justify;
+	-moz-justify-content: @justify;
+	-ms-justify-content: @justify;
+	justify-content: @justify;
 }
 
 // Packing Flex Lines
 // - applies to: multi-line flex containers
 // flex-start | flex-end | center | space-between | space-around | stretch
 .align-content(@align: stretch) {
-    -webkit-align-content: @align;
-    -moz-align-content: @align;
-    -ms-align-content: @align;
-    align-content: @align;
+	-webkit-align-content: @align;
+	-moz-align-content: @align;
+	-ms-align-content: @align;
+	align-content: @align;
 }
 
 // Cross-axis Alignment
 // - applies to: flex containers
 // flex-start | flex-end | center | baseline | stretch
 .align-items(@align: stretch) {
-    -webkit-align-items: @align;
-    -moz-align-items: @align;
-    -ms-align-items: @align;
-    align-items: @align;
+	-webkit-align-items: @align;
+	-moz-align-items: @align;
+	-ms-align-items: @align;
+	align-items: @align;
 }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -98,40 +99,40 @@
 // - applies to: flex items
 // <positive-number>, initial, auto, or none
 .flex(@columns: initial) {
-    -webkit-flex: @columns;
-    -moz-flex: @columns;
-    -ms-flex: @columns;
-    flex: @columns;
+	-webkit-flex: @columns;
+	-moz-flex: @columns;
+	-ms-flex: @columns;
+	flex: @columns;
 }
 
 // Display Order
 // - applies to: flex items
 // <integer>
 .flex-order(@order: 0) {
-    -webkit-order: @order;
-    -moz-order: @order;
-    -ms-order: @order;
-    order: @order;
+	-webkit-order: @order;
+	-moz-order: @order;
+	-ms-order: @order;
+	order: @order;
 }
 
 // Flex grow factor
 // - applies to: flex items
 // <number>
 .flex-grow(@grow: 0) {
-    -webkit-flex-grow: @grow;
-    -moz-flex-grow: @grow;
-    -ms-flex-grow: @grow;
-    flex-grow: @grow;
+	-webkit-flex-grow: @grow;
+	-moz-flex-grow: @grow;
+	-ms-flex-grow: @grow;
+	flex-grow: @grow;
 }
 
 // Flex shrink
 // - applies to: flex item shrink factor
 // <number>
 .flex-shrink(@shrink: 1) {
-    -webkit-flex-shrink: @shrink;
-    -moz-flex-shrink: @shrink;
-    -ms-flex-shrink: @shrink;
-    flex-shrink: @shrink;
+	-webkit-flex-shrink: @shrink;
+	-moz-flex-shrink: @shrink;
+	-ms-flex-shrink: @shrink;
+	flex-shrink: @shrink;
 }
 
 // Flex basis
@@ -139,248 +140,356 @@
 // - applies to: flex itemsnitial main size of the flex item
 // <width>
 .flex-basis(@width: auto) {
-    -webkit-flex-basis: @width;
-    -moz-flex-basis: @width;
-    -ms-flex-basis: @width;
-    flex-basis: @width;
+	-webkit-flex-basis: @width;
+	-moz-flex-basis: @width;
+	-ms-flex-basis: @width;
+	flex-basis: @width;
 }
 
 // Cross-axis Alignment
 // - applies to: flex items
 // auto | flex-start | flex-end | center | baseline | stretch
 .align-self(@align: auto) {
-    -webkit-align-self: @align;
-    -moz-align-self: @align;
-    -ms-align-self: @align;
-    align-self: @align;
+	-webkit-align-self: @align;
+	-moz-align-self: @align;
+	-ms-align-self: @align;
+	align-self: @align;
 }
 
 //////////////////////////////
 //end flexbox module//////
 //////////////////////////////
 body {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    .bgimg {
-        position: absolute;
-        //		top: 180px;
-        top: 6.9%;
-        background: url(images/bgimg.png);
-        height: 480px;
-        width: 100%;
-        z-index: -1;
-        //		outline: 2px dotted red;
-    }
-    .mn_wpr {
-        //		outline: 1px dotted red;
-        position: relative;
-        top: 0;
-        width: 1260px;
-        min-width: 1260px;
-        min-height: 100%;
-        margin: 0 auto;
-        background-color: #ffffff;
-        -webkit-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
-        -moz-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
-        box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
-        ////////////////////////////////////////////////////////
-        //		second wrapper
-        .sec_wrp {
-            header {
-                height: 280px;
-                width: 100%;
-                // outline: 1px dotted blue;
-                /////////////////////////////
-                //			top_navigation//////////////
-                ////////////////////////////
-                nav {
-                    height: 69px;
-                    width: 1160px;
-                    margin: 0 auto;
-                    position: relative;
-                    //				outline: 1px dotted red;
-                    border-bottom: 1px solid @mainGrayColor;
-                    ul {
-                        list-style: none;
-                        //					outline: 1px dotted red;
-                        padding: 1.5em 0 0 0;
-                        li {
-                            display: inline-block;
-                            &:nth-child(1) {
-                                float: left;
-                                margin: 0 42px 0 0;
-                                a {
-                                    .logotipe {
-                                        display: block;
-                                        margin: 0 auto;
-                                    }
-                                }
-                            }
-                            &:nth-child(2) {
-                                float: left;
-                                margin: 0 45px 0 0;
-                                a {}
-                            }
-                            &:nth-child(3) {
-                                float: left;
-                                margin: 0;
-                                a {}
-                            }
-                            &:nth-child(4) {
-                                float: right;
-                                margin: 0 160px 0 42px;
-                                a {}
-                            }
-                            &:nth-child(5) {
-                                float: right;
-                                margin: 0 0 0 45px;
-                                a {}
-                            }
-                            &:nth-child(6) {
-                                float: right;
-                                margin: 0;
-                                a {}
-                            }
-                        }
-                    }
-                    a.logotipe {
-                        position: absolute;
-                        top: 0px;
-                        left: 464px;
-                        background-color: #ffffff;
-                        padding: 0 47px 0 47px;
-                    }
-                }
-                /////////////////////////////
-                //			end_top_navigation//////////////
-                ////////////////////////////
-                .maglink_nphone {
-                    margin: 21px 0 0 0;
-                    // flex or inline-flex
-                    .flex-display(@display: flex);
-                    // flex-start | flex-end | center | space-between | space-around
-                    .justify-content(@justify: space-around);
-                    //                min-width: 1260px;
-                    .flex-basis(@width: 100%);
-                    a {
-                        // flex or inline-flex
-                        .flex-display(@display: flex);
-                        // flex-start | flex-end | center | space-between | space-around
-                        .justify-content(@justify: space-around);
-                        // - applies to: flex itemsnitial main size of the flex item
-                        // <width>
-                        // flex-start | flex-end | center | baseline | stretch
-                        .align-items(@align: center);
-                        .flex-basis(@width: 190px);
-                        &:last-child {
-                            text-decoration: none;
-                            span {
-                                color: @mainTextColor;
-                                font-size: 17px;
-                                //							font-weight: 700;
-                                font-family: proxima_nova_rgbold;
-                            }
-                        }
-                        img {}
-                        span {
-                            color: inherit;
-                        }
-                    }
-                }
-                .nametitle {
-                    // flex or inline-flex
-                    .flex-display(@display: flex);
-                    // row | row-reverse | column | column-reverse
-                    .flex-direction(@direction: column);
-                    .align-items(@align: center);
-                    margin: 50px 0 0 0;
-                    //                min-width: 1260px;
-                    .flex-basis(@width: 100%);
-                    span {
-                        &:first-child {
-                            color: @mainLTextColor;
-                            font-size: 3.1em;
-                            font-family: proxima_nova_rgbold;
-                            //						font-weight: bold;
-                            margin: 0 18px 20px 18px;
-                        }
-                        &:last-child {
-                            color: @mainTextColor;
-                            font-size: 1.3em;
-                        }
-                    }
-                }
-            }
-            width: 1160px;
-            margin: 0 auto;
-            // flex or inline-flex
-            .flex-display(@display: flex);
-            // flex-start | flex-end | center | space-between | space-around
-            .justify-content(@justify: space-between);
-            // <flex-direction> || <flex-wrap>
-            .flex-flow(@flow: row wrap);
-            .main_flexslider {
-                //            width: 1160px;
-                .flex-basis(@width: 100%);
-                margin: 0 auto;
-                overflow: hidden;
-                border-bottom: 2px solid #79b021;
-            }
-            section {
-                outline: 1px dotted red;
-                // <width>
-                .flex-basis(@width: 640px;
-                );
-                .heading {
-                    .flex-basis(@width: 100%);
-                    span {}
-                }
-            }
-            aside {
-                .flex-basis(@width: 440px);
-                outline: 1px dotted red;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	.bgimg {
+		position: absolute;
+		//		top: 180px;
+		top: 6.9%;
+		background: url(images/bgimg.png);
+		height: 480px;
+		width: 100%;
+		z-index: -1;
+		//		outline: 2px dotted red;
+	}
+	.mn_wpr {
+		//		outline: 1px dotted red;
+		position: relative;
+		top: 0;
+		width: 1260px;
+		min-width: 1260px;
+		min-height: 100%;
+		margin: 0 auto;
+		background-color: #ffffff;
+		-webkit-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
+		-moz-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
+		box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
+		////////////////////////////////////////////////////////
+		//		second wrapper
+		.sec_wrp {
+			header {
+				height: 280px;
+				width: 100%;
+				// outline: 1px dotted blue;
+				/////////////////////////////
+				//			top_navigation//////////////
+				////////////////////////////
+				nav {
+					height: 69px;
+					width: 1160px;
+					margin: 0 auto;
+					position: relative;
+					//				outline: 1px dotted red;
+					border-bottom: 1px solid @mainGrayColor;
+					ul {
+						list-style: none;
+						//					outline: 1px dotted red;
+						padding: 1.5em 0 0 0;
+						li {
+							display: inline-block;
+							&:nth-child(1) {
+								float: left;
+								margin: 0 42px 0 0;
+								a {
+									.logotipe {
+										display: block;
+										margin: 0 auto;
+									}
+								}
+							}
+							&:nth-child(2) {
+								float: left;
+								margin: 0 45px 0 0;
+								a {}
+							}
+							&:nth-child(3) {
+								float: left;
+								margin: 0;
+								a {}
+							}
+							&:nth-child(4) {
+								float: right;
+								margin: 0 160px 0 42px;
+								a {}
+							}
+							&:nth-child(5) {
+								float: right;
+								margin: 0 0 0 45px;
+								a {}
+							}
+							&:nth-child(6) {
+								float: right;
+								margin: 0;
+								a {}
+							}
+						}
+					}
+					a.logotipe {
+						position: absolute;
+						top: 0px;
+						left: 464px;
+						background-color: #ffffff;
+						padding: 0 47px 0 47px;
+					}
+				}
+				/////////////////////////////
+				//			end_top_navigation//////////////
+				////////////////////////////
+				.maglink_nphone {
+					margin: 21px 0 0 0;
+					// flex or inline-flex
+					.flex-display(@display: flex);
+					// flex-start | flex-end | center | space-between | space-around
+					.justify-content(@justify: space-around);
+					//                min-width: 1260px;
+					.flex-basis(@width: 100%);
+					a {
+						// flex or inline-flex
+						.flex-display(@display: flex);
+						// flex-start | flex-end | center | space-between | space-around
+						.justify-content(@justify: space-around);
+						// - applies to: flex itemsnitial main size of the flex item
+						// <width>
+						// flex-start | flex-end | center | baseline | stretch
+						.align-items(@align: center);
+						.flex-basis(@width: 190px);
+						&:last-child {
+							text-decoration: none;
+							span {
+								color: @mainTextColor;
+								font-size: 17px;
+								//							font-weight: 700;
+								font-family: proxima_nova_rgbold;
+							}
+						}
+						img {}
+						span {
+							color: inherit;
+						}
+					}
+				}
+				.nametitle {
+					// flex or inline-flex
+					.flex-display(@display: flex);
+					// row | row-reverse | column | column-reverse
+					.flex-direction(@direction: column);
+					.align-items(@align: center);
+					margin: 50px 0 0 0;
+					//                min-width: 1260px;
+					.flex-basis(@width: 100%);
+					span {
+						&:first-child {
+							color: @mainLTextColor;
+							font-size: 3.1em;
+							font-family: proxima_nova_rgbold;
+							//						font-weight: bold;
+							margin: 0 18px 20px 18px;
+						}
+						&:last-child {
+							color: @mainTextColor;
+							font-size: 1.3em;
+						}
+					}
+				}
+			}
+			width: 1160px;
+			margin: 0 auto;
+			// flex or inline-flex
+			.flex-display(@display: flex);
+			// flex-start | flex-end | center | space-between | space-around
+			.justify-content(@justify: space-between);
+			// <flex-direction> || <flex-wrap>
+			.flex-flow(@flow: row wrap);
+			.main_flexslider {
+				//            width: 1160px;
+				.flex-basis(@width: 100%);
+				margin: 0 auto;
+				overflow: hidden;
+				border-bottom: 2px solid #79b021;
+			}
+			section {
+//				outline: 1px dotted red;
+				// <width>
+				.flex-basis(@width: 640px);
+				margin: 60px 0 0 0;
+				.heading {
+					.flex-basis(@width: 100%);
+					border-bottom: 4px solid @mainGreenColor;
+					padding: 0 0 10px 0;
+					margin: 0 0 30px 0;
+					span {
+						font-size: 2.2em;
+						color: @mainHeadingColor;
+					}
+				}
+				.newsblock {
+					.flex-display(@display: flex);
+					// <flex-direction> || <flex-wrap>
+					.flex-flow(@flow: row-reverse wrap-reverse);
+					// flex-start | flex-end | center | space-between | space-around
+					.justify-content(@justify: space-between);
+					li {
+						.flex-display(@display: flex);
+						.flex-basis(@width: 280px);
+						// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+						.flex-flow(@flow: row wrap);
+						// flex-start | flex-end | center | baseline | stretch
+						.align-items(@align: center);
+						.date_b {
+							display: inline-block;
+							width: 36px;
+							height: 36px;
+							background-color: @mainOrangeColor;
+							font-size: 24px;
+							color: #fff;
+							margin: 0 10px 0 0;
+							.flex-display(@display: flex);
+							.align-items(@align: center);
+							.justify-content(@justify: center);
+						}
+						.mounth_b {
+							font-size: 0.9em;
+						}
+						.head_b {
+							.flex-basis(@width: 100%);
+							margin: 10px 0 0 0;
+						}
+						p {
+							font-size: 0.9em;
+							margin: 25px 0 30px 0;
+							line-height: 20px;
+						}
+					}
+				}
+				article {
+					h1 {
+						color: @mainHeadingColor;
+						font-size: 2.4em;
+					}
+				}
+				.brends_b {
+					margin: 30px 0 0 0;
+					.flex-display(@display: flex);
+					//						.flex-basis(@width: 280px) ;
+					// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+					.flex-flow(@flow: row nowrap);
+					// flex-start | flex-end | center | baseline | stretch
+					.align-items(@align: center);
+					ul {
+						.flex-display(@display: flex);
+						//						.flex-basis(@width: 280px) ;
+						// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+						.flex-flow(@flow: row wrap);
+						// flex-start | flex-end | center | baseline | stretch
+						.align-items(@align: center);
+						li {
+							margin: 0 15px 0 0;
+							border: 1px solid @mainGrayColor;
+							a {}
+						}
+					}
+					p {
+						.flex-display(@display: flex);
+						.flex-basis(@width: 220px);
+						color: #418201;
+					}
+				}
+			}
+			aside {
+				.flex-basis(@width: 440px);
+//				outline: 1px dotted red;
+				margin: 60px 0 0 0;
 
-                .aside_flexslider {
-                    .flex-display(@display: flex);
-                    .flex-basis(@width: 100%);
-                    .justify-content(@justify: center);
-                    .align-items(@align: center);
+				.blog_b {
+					margin: 30px 0 0 0;
+					.flex-display(@display: flex);
+					// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+					.flex-flow(@flow: column nowrap);
+					// flex-start | flex-end | center | baseline | stretch
+					.align-items(@align: stretch);
+					.flex-basis(@width:100%);
 
-                    .slides {
+					li {
+						.flex-display(@display: flex);
+
+						// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+						.flex-flow(@flow: row nowrap);
+
+						.justify-content(@justify: space-between);
 
 
+						margin: 0 0 40px 0;
 
+						&:nth-child(2n) {
+							// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+							.flex-flow(@flow: row-reverse nowrap);
+						}
 
+						.text_items {
+							.flex-display(@display: flex);
+							// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+							.flex-flow(@flow: column nowrap);
+							.flex-basis(@width:280px);
 
+							h3 {
+								font-family: proxima_nova_rgbold;
+								font-size: 1.2em;
+								color: @mainHeadingColor;
+								margin: 0 0 19px 0;
+//								.flex-basis(@width:286px);
+							}
+							p {
+								font-size: 0.9em;
+								line-height: 20px;
+								-ms-flex: 0 1 auto;
+							}
+							a {
+								font-size: 0.9em;
+								line-height: 20px;
+							}
+						}
 
+						img {
+							width: 130px;
+							height: 130px;
 
-                    }
-
-                                                .flex-control-nav{
-                                                    .flex-display(@display: flex);
-                                                    .align-items(@align: center);
-
-                            }
-                            .flex-direction-nav{
-                                .flex-display(@display: flex);
-                                .align-items(@align: center);
-
-                            }
-                }
-            }
-            div.contacts {
-                .flex-basis(@width: 100%);
-                outline: 1px dotted red;
-            }
-            footer {
-                .flex-basis(@width: 100%);
-                outline: 1px dotted red;
-            }
-        }
-        //		end second wrapper
-        ////////////////////////////////////////////////////////
-    }
+						}
+					}
+				}
+			}
+			div.contacts {
+				.flex-basis(@width: 100%);
+				outline: 1px dotted red;
+				margin: 60px 0 0 0;
+			}
+			footer {
+				.flex-basis(@width: 100%);
+				outline: 1px dotted red;
+				margin: 60px 0 0 0;
+			}
+		}
+		//		end second wrapper
+		////////////////////////////////////////////////////////
+	}
 }
-
-

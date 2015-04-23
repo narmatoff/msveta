@@ -1,3 +1,7 @@
+//MQ_functions
+@desktop: ~"only screen and (max-width:1620px)";
+@tablet: ~"only screen and (max-width:480px)";
+//Color variables
 @mainTextColor: #333333;
 @mainLTextColor: #666666;
 @mainGreenColor: #79b021;
@@ -174,6 +178,9 @@ body {
 	width: 100%;
 	height: 100%;
 	.bgimg {
+				@media @tablet {
+			display: none;
+		}
 		position: absolute;
 		//		top: 180px;
 		top: 6.9%;
@@ -184,6 +191,13 @@ body {
 		//		outline: 2px dotted red;
 	}
 	.mn_wpr {
+		@media @desktop {
+			overflow: hidden;
+		}
+		@media @tablet {
+			min-width: 480px;
+			width: 480px;
+		}
 		//		outline: 1px dotted red;
 		position: relative;
 		top: 0;
@@ -193,10 +207,9 @@ body {
 		margin: 0 auto;
 		padding: 0 0 90px 0;
 		background-color: #ffffff;
-		-webkit-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
-		-moz-box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
-		box-shadow: 0px 0px 15px 0.00px rgba(0, 0, 0, 0.2);
-		overflow: hidden;
+		-webkit-box-shadow: 0px 0px 15px 0.00px rgba(0,0,0,0.2);
+		-moz-box-shadow: 0px 0px 15px 0.00px rgba(0,0,0,0.2);
+		box-shadow: 0px 0px 15px 0.00px rgba(0,0,0,0.2);
 		.catalogbtn {
 			background-color: @mainGreenColor;
 			width: 40px;
@@ -245,8 +258,14 @@ body {
 			}
 			//				catalog
 			.catalog {
+				@media @desktop {
+					//							background-color: pink;
+				}
+				@media @tablet {
+					//							background-color: pink;
+				}
 				position: absolute;
-				left: -195px;
+				left: -174px;
 				opacity: 0;
 				top: 0;
 				z-index: 1;
@@ -271,12 +290,12 @@ body {
 				li {
 					color: #eaeaea;
 					a {
-						color: #eaeaea;
+						color: #fff;
 						font-weight: bold;
 						font-size: 1.1em;
 						text-decoration: none;
 						&:hover {
-							color: #fff;
+							text-decoration: underline;
 						}
 					}
 					ul {
@@ -286,17 +305,20 @@ body {
 							a {
 								font-size: 0.9em;
 								font-weight: normal;
+								color: #ecffc0;
 								&:hover {
-									color: #fff;
+									text-decoration: underline;
 								}
 							}
 						}
 					}
 				}
 				&.showCat {
+					@media @desktop {
+						left: 40px;
+					}
 					display: block;
 					opacity: 1;
-					left: 40px;
 				}
 			}
 			//				end_catalog
@@ -304,6 +326,10 @@ body {
 		////////////////////////////////////////////////////////
 		//		second wrapper
 		.sec_wrp {
+			@media @tablet {
+				width: 480px;
+				min-width: 480px;
+			}
 			header {
 				height: 280px;
 				width: 100%;
@@ -312,6 +338,10 @@ body {
 				//			top_navigation//////////////
 				////////////////////////////
 				nav {
+					@media @tablet {
+						width:auto;
+					}
+
 					height: 69px;
 					width: 1160px;
 					margin: 0 auto;
@@ -446,6 +476,9 @@ body {
 				border-bottom: 2px solid #79b021;
 			}
 			section {
+				@media @tablet {
+					padding: 0 10px 0 10px;
+				}
 				//				outline: 1px dotted red;
 				// <width>
 				.flex-basis(@width: 640px);
@@ -466,7 +499,11 @@ body {
 					.flex-flow(@flow: row-reverse wrap-reverse);
 					// flex-start | flex-end | center | space-between | space-around
 					.justify-content(@justify: space-between);
+
 					li {
+								@media @tablet {
+.flex-basis(@width: 100%);
+		}
 						.flex-display(@display: flex);
 						.flex-basis(@width: 280px);
 						// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
@@ -506,6 +543,10 @@ body {
 					}
 				}
 				.brends_b {
+									@media @tablet {
+					.flex-flow(@flow: row wrap);
+				}
+
 					margin: 30px 0 0 0;
 					.flex-display(@display: flex);
 					//						.flex-basis(@width: 280px) ;
@@ -513,13 +554,19 @@ body {
 					.flex-flow(@flow: row nowrap);
 					// flex-start | flex-end | center | baseline | stretch
 					.align-items(@align: center);
+
 					ul {
-						.flex-display(@display: flex);
-						//						.flex-basis(@width: 280px) ;
+
+										@media @tablet {
+					.flex-basis(@width: 100%) ;
+				}
+							.flex-display(@display: flex);
 						// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
 						.flex-flow(@flow: row wrap);
 						// flex-start | flex-end | center | baseline | stretch
 						.align-items(@align: center);
+						.flex-basis(@width: 1160px );
+
 						li {
 							margin: 0 15px 0 0;
 							border: 1px solid @mainGrayColor;
@@ -528,12 +575,15 @@ body {
 					}
 					p {
 						.flex-display(@display: flex);
-						.flex-basis(@width: 220px);
+						.flex-basis(@width: 100%);
 						color: #418201;
 					}
 				}
 			}
 			aside {
+				@media @tablet {
+					display: none;
+				}
 				.flex-basis(@width: 440px);
 				//				outline: 1px dotted red;
 				margin: 60px 0 0 0;
@@ -588,21 +638,37 @@ body {
 				.flex-basis(@width: 100%);
 				//				outline: 1px dotted red;
 				margin: 60px 0 0 0;
+				padding: 0 10px 0 10px;
 				.heading {
 					.flex-display(@display: flex);
 					.flex-basis(@width: 100%);
 					// flex-start | flex-end | center | baseline | stretch
 					.align-items(@align: baseline);
+					.flex-flow(@flow:row wrap);
 					border-top: 1px solid @mainGrayColor;
 					border-bottom: 3px solid @mainGreenColor;
 					padding: 20px 0 0 0;
 					margin: 0 0 30px 0;
+					////////////////////////////////////////////////////////////////////////////////////////
 					span {
+
+						@media @tablet {
+					.flex-basis(@width:100%);
+							margin: 0 0 20px 0
+
+				}
 						font-size: 2.2em;
 						color: @mainHeadingColor;
-						margin: 0 54px 0 0
+						margin: 0 15px 0 0
 					}
 					div {
+
+						@media @tablet{
+							padding: 0 8px 0 8px;
+							height: 38px;
+							margin: 0 10px 10px 0;
+						}
+
 						height: 43px;
 						background: @mainGrayColor;
 						padding: 0 15px 0 15px;
@@ -614,6 +680,10 @@ body {
 						font: 1.1em @fontFamBold;
 						cursor: pointer;
 						&.active_btn {
+													@media @tablet{
+//							padding: 0 5px 0 5px;
+							height: 38px;
+						}
 							background: @mainGreenColor;
 							height: 47px;
 							color: #fff;

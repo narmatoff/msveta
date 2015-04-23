@@ -4,9 +4,14 @@ body {
   width: 100%;
   height: 100%;
 }
+@media only screen and (max-width:480px) {
+  body {
+    font-size: 1.2em;
+  }
+}
 body .bgimg {
-  position: absolute;
-  top: 6.9%;
+  position: fixed;
+  top: 15%;
   background: url(images/bgimg.png);
   height: 480px;
   width: 100%;
@@ -111,8 +116,8 @@ body .mn_wpr .catalogbtn .catalog {
   z-index: 1;
   width: 144px;
   padding: 15px;
+  overflow: hidden;
   background: #79b021;
-  display: block;
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
@@ -156,7 +161,6 @@ body .mn_wpr .catalogbtn .catalog li ul li a:hover {
   text-decoration: underline;
 }
 body .mn_wpr .catalogbtn .catalog.showCat {
-  display: block;
   opacity: 1;
 }
 @media only screen and (max-width:1620px) {
@@ -627,7 +631,7 @@ body .mn_wpr .sec_wrp div.contacts .heading {
 body .mn_wpr .sec_wrp div.contacts .heading span {
   font-size: 2.2em;
   color: #4c4c4c;
-  margin: 0 54px 0 0;
+  margin: 0 15px 0 0;
 }
 @media only screen and (max-width:480px) {
   body .mn_wpr .sec_wrp div.contacts .heading span {
@@ -635,6 +639,7 @@ body .mn_wpr .sec_wrp div.contacts .heading span {
     -moz-flex-basis: 100%;
     -ms-flex-basis: 100%;
     flex-basis: 100%;
+    margin: 0 0 20px 0;
   }
 }
 body .mn_wpr .sec_wrp div.contacts .heading div {
@@ -660,13 +665,20 @@ body .mn_wpr .sec_wrp div.contacts .heading div {
 }
 @media only screen and (max-width:480px) {
   body .mn_wpr .sec_wrp div.contacts .heading div {
-    padding: 0 5px 0 5px;
+    padding: 0 8px 0 8px;
+    height: 38px;
+    margin: 0 10px 10px 0;
   }
 }
 body .mn_wpr .sec_wrp div.contacts .heading div.active_btn {
   background: #79b021;
   height: 47px;
   color: #fff;
+}
+@media only screen and (max-width:480px) {
+  body .mn_wpr .sec_wrp div.contacts .heading div.active_btn {
+    height: 38px;
+  }
 }
 body .mn_wpr .sec_wrp div.contacts .head_add {
   display: -webkit-flex;

@@ -26,4 +26,18 @@ $(document).ready(function () {
 	});
 
 
+
+//	catalog menu events
+	$(".catalogbtn").click(function () {
+		$(".catalog").toggleClass("showCat");
+	});
+
+	$("body").click(function (event) {
+		if ($(event.target).closest(".catalogbtn").length === 0) {
+			$(".catalog").removeClass("showCat");
+		}
+	});
+//end catalog menu events
+
+
 });

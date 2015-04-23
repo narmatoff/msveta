@@ -25,6 +25,69 @@ body .mn_wpr {
   -moz-box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
   box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
 }
+body .mn_wpr .catalogbtn {
+  background-color: #79b021;
+  width: 40px;
+  height: 155px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: column nowrap;
+  -moz-flex-flow: column nowrap;
+  -ms-flex-flow: column nowrap;
+  flex-flow: column nowrap;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  position: absolute;
+  top: 105px;
+  cursor: pointer;
+}
+body .mn_wpr .catalogbtn span {
+  font-weight: 700;
+  display: block;
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -o-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  color: #fff;
+  font-size: 1.2em;
+  margin: 0 0 25px 0;
+}
+body .mn_wpr .catalogbtn img {
+  display: block;
+  width: 14px;
+  height: 11px;
+}
+body .mn_wpr .catalogbtn .catalog {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  z-index: 1;
+  background: #79b021;
+  width: 0;
+}
+body .mn_wpr .catalogbtn .catalog li {
+  display: block;
+}
+body .mn_wpr .catalogbtn .catalog li a {
+  display: block;
+}
+body .mn_wpr .catalogbtn .catalog li ul {
+  background-color: pink;
+}
+body .mn_wpr .catalogbtn .catalog.showCat {
+  width: 163px;
+  padding: 15px;
+}
 body .mn_wpr .sec_wrp {
   width: 1160px;
   margin: 0 auto;

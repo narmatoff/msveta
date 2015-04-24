@@ -1,198 +1,6 @@
-//MQ_functions
-@desktop: ~"only screen and (max-width:1620px)";
-@tablet: ~"only screen and (max-width:480px)";
-//Color variables
-@mainTextColor: #333333;
-@mainLTextColor: #666666;
-@mainGreenColor: #79b021;
-@mainGrayColor: #d9d9d9;
-@mainOrangeColor: #ff8e35;
-@mainLinkColor: #1075c2;
-@mainHeadingColor: #4c4c4c;
-@fontFamReg: proxima_nova_rgregular;
-@fontFamBold: proxima_nova_rgbold;
-/////////////////////////////////////////////////////////////////////////////////////////////
-// linear transition
-.linear_transitions(@ms: .1s) {
-	-webkit-transition: ~"all @{ms} ease-in-out";
-	-moz-transition: ~"all @{ms} ease-in-out";
-	-ms-transition: ~"all @{ms} ease-in-out"; // IE10 uses -ms-flexbox
-	-o-transition: ~"all @{ms} ease-in-out"; // IE11
-	transition: ~"all @{ms} ease-in-out";
-}
-
-//transition-delay
-.transition-delay(@ms: 500ms) {
-	-webkit-transition-delay: @ms;
-	-moz-transition-delay: @ms;
-	-ms-transition-delay: @ms;
-	-o-transition-delay: @ms;
-	transition-delay: @ms;
-}
-
-//transform-rotate
-.transform-rotate(@deg: 90deg) {
-	-webkit-transform: rotate(@deg);
-	-moz-transform: rotate(@deg);
-	-o-transform: rotate(@deg);
-	-ms-transform: rotate(@deg);
-	transform: rotate(@deg);
-}
-
-//border_radius
-.border-radius(@radius: 50px) {
-	-webkit-border-radius: @radius;
-	-moz-border-radius: @radius;
-	border-radius: @radius;
-}
-//box_shadow
-.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
-	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
-	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
-	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
-}
-
-
-///////////////////////////////////////////////////////////////////////////////////////////
-// --------------------------------------------------
-// Flexbox LESS mixins
-// The spec: http://www.w3.org/TR/css3-flexbox
-// --------------------------------------------------
-// Flexbox display
-// flex or inline-flex
-.flex-display(@display: flex) {
-	display: ~"-webkit-@{display}";
-	display: ~"-moz-@{display}";
-	display: ~"-ms-@{display}box"; // IE10 uses -ms-flexbox
-	display: ~"-ms-@{display}"; // IE11
-	display: @display;
-}
-
-// Flex Flow Direction
-// - applies to: flex containers
-// row | row-reverse | column | column-reverse
-.flex-direction(@direction: row) {
-	-webkit-flex-direction: @direction;
-	-moz-flex-direction: @direction;
-	-ms-flex-direction: @direction;
-	flex-direction: @direction;
-}
-
-// Flex Line Wrapping
-// - applies to: flex containers
-// nowrap | wrap | wrap-reverse
-.flex-wrap(@wrap: nowrap) {
-	-webkit-flex-wrap: @wrap;
-	-moz-flex-wrap: @wrap;
-	-ms-flex-wrap: @wrap;
-	flex-wrap: @wrap;
-}
-
-// Flex Direction and Wrap
-// - applies to: flex containers
-// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
-.flex-flow(@flow: row wrap) {
-	-webkit-flex-flow: @flow;
-	-moz-flex-flow: @flow;
-	-ms-flex-flow: @flow;
-	flex-flow: @flow;
-}
-
-// Axis Alignment
-// - applies to: flex containers
-// flex-start | flex-end | center | space-between | space-around
-.justify-content(@justify: flex-start) {
-	-webkit-justify-content: @justify;
-	-moz-justify-content: @justify;
-	-ms-justify-content: @justify;
-	justify-content: @justify;
-}
-
-// Packing Flex Lines
-// - applies to: multi-line flex containers
-// flex-start | flex-end | center | space-between | space-around | stretch
-.align-content(@align: stretch) {
-	-webkit-align-content: @align;
-	-moz-align-content: @align;
-	-ms-align-content: @align;
-	align-content: @align;
-}
-
-// Cross-axis Alignment
-// - applies to: flex containers
-// flex-start | flex-end | center | baseline | stretch
-.align-items(@align: stretch) {
-	-webkit-align-items: @align;
-	-moz-align-items: @align;
-	-ms-align-items: @align;
-	align-items: @align;
-}
-
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////////
-// The 'flex' shorthand
-// - applies to: flex items
-// <positive-number>, initial, auto, or none
-.flex(@columns: initial) {
-	-webkit-flex: @columns;
-	-moz-flex: @columns;
-	-ms-flex: @columns;
-	flex: @columns;
-}
-
-// Display Order
-// - applies to: flex items
-// <integer>
-.flex-order(@order: 0) {
-	-webkit-order: @order;
-	-moz-order: @order;
-	-ms-order: @order;
-	order: @order;
-}
-
-// Flex grow factor
-// - applies to: flex items
-// <number>
-.flex-grow(@grow: 0) {
-	-webkit-flex-grow: @grow;
-	-moz-flex-grow: @grow;
-	-ms-flex-grow: @grow;
-	flex-grow: @grow;
-}
-
-// Flex shrink
-// - applies to: flex item shrink factor
-// <number>
-.flex-shrink(@shrink: 1) {
-	-webkit-flex-shrink: @shrink;
-	-moz-flex-shrink: @shrink;
-	-ms-flex-shrink: @shrink;
-	flex-shrink: @shrink;
-}
-
-// Flex basis
-// - the initial main size of the flex item
-// - applies to: flex itemsnitial main size of the flex item
-// <width>
-.flex-basis(@width: auto) {
-	-webkit-flex-basis: @width;
-	-moz-flex-basis: @width;
-	-ms-flex-basis: @width;
-	flex-basis: @width;
-}
-
-// Cross-axis Alignment
-// - applies to: flex items
-// auto | flex-start | flex-end | center | baseline | stretch
-.align-self(@align: auto) {
-	-webkit-align-self: @align;
-	-moz-align-self: @align;
-	-ms-align-self: @align;
-	align-self: @align;
-}
-
+@import "start.css";
+@import "variables.less";
+@import "mixins.less";
 //////////////////////////////
 //end flexbox module////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////
@@ -232,18 +40,11 @@ body {
 		margin: 0 auto;
 		padding: 0 0 90px 0;
 		background-color: #ffffff;
-		-webkit-box-shadow: 0px 0px 15px 0.00px rgba(0,
-		0,
-		0,
-		0.2);
-		-moz-box-shadow: 0px 0px 15px 0.00px rgba(0,
-		0,
-		0,
-		0.2);
-		box-shadow: 0px 0px 15px 0.00px rgba(0,
-		0,
-		0,
-		0.2);
+		.box-shadow (@x: 0,
+		@y: 0,
+		@blur: 15px,
+		@spread: 0,
+		@alpha: 0.2);
 		.catalogbtn {
 			@media @tablet {
 				//				position: inherit;
@@ -412,6 +213,8 @@ body {
 				nav {
 					@media @tablet {
 						width: auto;
+						//							display: none;
+						border: none;
 					}
 					height: 69px;
 					width: 1160px;
@@ -420,6 +223,10 @@ body {
 					//				outline: 1px dotted red;
 					border-bottom: 1px solid @mainGrayColor;
 					ul {
+						@media @tablet {
+							width: auto;
+							display: none;
+						}
 						list-style: none;
 						//					outline: 1px dotted red;
 						padding: 1.5em 0 0 0;
@@ -428,12 +235,7 @@ body {
 							&:nth-child(1) {
 								float: left;
 								margin: 0 42px 0 0;
-								a {
-									.logotipe {
-										display: block;
-										margin: 0 auto;
-									}
-								}
+								a {}
 							}
 							&:nth-child(2) {
 								float: left;
@@ -462,12 +264,23 @@ body {
 							}
 						}
 					}
-					a.logotipe {
+					.logotipe {
+						@media @tablet {
+							left: 190px;
+							padding: 0;
+						}
 						position: absolute;
 						top: 0px;
 						left: 464px;
 						background-color: #ffffff;
 						padding: 0 47px 0 47px;
+						display: block;
+						margin: 0 auto;
+						img {
+							@media @tablet {
+								height: 100px;
+							}
+						}
 					}
 					/////////////////////////
 				}
@@ -475,11 +288,19 @@ body {
 				//			end_top_navigation//////////////
 				////////////////////////////
 				.maglink_nphone {
-
-					@media @tablet{
-
+					@media @tablet {
+						// flex or inline-flex
+						.flex-display(@display: flex);
+						// flex-start | flex-end | center | space-between | space-around
+						.justify-content(@justify: space-between);
+						//                min-width: 1260px;
+						//						.flex-wrap(@wrap: 1);
+						.flex-flow(@flow: row nowrap);
+						position: absolute;
+						top: 0;
+						width: 100%;
+						margin: 15px 0;
 					}
-
 					margin: 21px 0 0 0;
 					// flex or inline-flex
 					.flex-display(@display: flex);
@@ -487,44 +308,69 @@ body {
 					.justify-content(@justify: space-around);
 					//                min-width: 1260px;
 					.flex-basis(@width: 100%);
-
-
 					a {
-						// flex or inline-flex
+						@media @tablet {
+							.flex-basis(@width: 140px);
+							.flex-wrap(@wrap: 1);
+							// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
+							.flex-flow(@flow: column nowrap);
+							.justify-content(@justify: center);
+							.align-content(@align: center);
+						}
 						.flex-display(@display: flex);
-						// flex-start | flex-end | center | space-between | space-around
 						.justify-content(@justify: space-around);
-						// - applies to: flex itemsnitial main size of the flex item
-						// <width>
-						// flex-start | flex-end | center | baseline | stretch
 						.align-items(@align: center);
 						.flex-basis(@width: 190px);
+						text-align: center;
+						font-size: 1em;
 						&:last-child {
 							text-decoration: none;
 							span {
+								@media @tablet {
+									color: @mainLinkColor;
+									text-decoration: underline;
+									&:hover {
+										text-decoration: none;
+									}
+								}
 								color: @mainTextColor;
-								font-size: 1.1em;
+								font-size: 1em;
 								//							font-weight: 700;
 								font-family: @fontFamBold;
+								.recall {
+									@media @tablet {
+										display: block;
+									}
+									display: none;
+								}
 							}
 						}
 						img {}
 						span {
+							@media @tablet {
+								font-family: @fontFamBold;
+							}
 							color: inherit;
 						}
 					}
 				}
 				.nametitle {
+					@media @tablet {
+						margin: 80px 0 0 0;
+					}
 					// flex or inline-flex
 					.flex-display(@display: flex);
 					// row | row-reverse | column | column-reverse
 					.flex-direction(@direction: column);
 					.align-items(@align: center);
-					margin: 50px 0 0 0;
+					margin: 50px 0;
 					//                min-width: 1260px;
 					.flex-basis(@width: 100%);
 					span {
 						&:first-child {
+							@media @tablet {
+								font-size: 2.8em;
+							}
 							color: @mainLTextColor;
 							font-size: 3.1em;
 							font-family: @fontFamBold;
@@ -532,6 +378,9 @@ body {
 							margin: 0 18px 20px 18px;
 						}
 						&:last-child {
+							@media @tablet {
+								font-size: 1.3em;
+							}
 							color: @mainTextColor;
 							font-size: 1.5em;
 						}
@@ -555,13 +404,16 @@ body {
 			}
 			section {
 				@media @tablet {
-					padding: 0 10px 0 10px;
+					padding: 0 10px 10px 10px;
 				}
 				//				outline: 1px dotted red;
 				// <width>
 				.flex-basis(@width: 640px);
 				margin: 60px 0 0 0;
 				.heading {
+					//					@media @tablet{
+					//						padding: 0 10px 10px 10px;
+					//					}
 					.flex-basis(@width: 100%);
 					border-bottom: 3px solid @mainGreenColor;
 					padding: 0 0 10px 0;
@@ -572,6 +424,9 @@ body {
 					}
 				}
 				.newsblock {
+					//										@media @tablet{
+					//						padding: 0 10px 10px 10px;
+					//					}
 					.flex-display(@display: flex);
 					// <flex-direction> || <flex-wrap>
 					.flex-flow(@flow: row-reverse wrap-reverse);
@@ -613,15 +468,38 @@ body {
 						}
 					}
 				}
+				h1 {
+					color: @mainHeadingColor;
+					font-size: 2.4em;
+					line-height: 0.8em;
+				}
 				article {
-					h1 {
+					//										@media @tablet{
+					//						padding: 0 10px 10px 10px;
+					//					}
+					h2 {
 						color: @mainHeadingColor;
-						font-size: 2.4em;
+						font-size: 2.1em;
+						margin: 15px 0 15px 0;
+						line-height: 0.8em;
+					}
+					h3 {
+						color: @mainHeadingColor;
+						font-size: 1.9em;
+						margin: 15px 0 15px 0;
+						line-height: 0.8em;
+					}
+					h4 {
+						color: @mainHeadingColor;
+						font-size: 1.5em;
+						margin: 15px 0 15px 0;
+						line-height: 0.8em;
 					}
 				}
 				.brends_b {
 					@media @tablet {
 						.flex-flow(@flow: row wrap);
+						//						padding: 0 10px 10px 10px;
 					}
 					margin: 30px 0 0 0;
 					.flex-display(@display: flex);
@@ -712,22 +590,30 @@ body {
 				.flex-basis(@width: 100%);
 				//				outline: 1px dotted red;
 				margin: 60px 0 0 0;
-				padding: 0 10px 0 10px;
+				//				padding: 0 10px 0 10px;
 				.heading {
+					@media @tablet {
+						padding: 20px 10px 0 10px;
+					}
 					.flex-display(@display: flex);
 					.flex-basis(@width: 100%);
 					// flex-start | flex-end | center | baseline | stretch
-					.align-items(@align: baseline);
+					.align-items(@align: flex-start);
 					.flex-flow(@flow: row wrap);
+					// flex-start | flex-end | center | space-between | space-around | stretch
+					.align-content(@align: space-between);
+					// flex-start | flex-end | center | space-between | space-around
+					.justify-content(@justify: space-around);
 					border-top: 1px solid @mainGrayColor;
 					border-bottom: 3px solid @mainGreenColor;
 					padding: 20px 0 0 0;
 					margin: 0 0 30px 0;
+					// linear transition
 					////////////////////////////////////////////////////////////////////////////////////////
 					span {
 						@media @tablet {
 							.flex-basis(@width: 100%);
-							margin: 0 0 20px 0
+							margin: 0 0 20px 0;
 						}
 						font-size: 2.2em;
 						color: @mainHeadingColor;
@@ -738,8 +624,18 @@ body {
 							padding: 0 8px 0 8px;
 							height: 38px;
 							margin: 0 10px 10px 0;
+							.flex-basis(@width: 40%);
+							font-size: 0.9em;
+							///////////////////////////////////////////////////////////////
+							///////////////////////////////////////////////////////////////
+							///////////////////////////////////////////////////////////////
+							///////////////////////////////////////////////////////////////
+							///////////////////////////////////////////////////////////////
+
+
 						}
 						height: 43px;
+						border-bottom: 4px solid #fff;
 						background: @mainGrayColor;
 						padding: 0 15px 0 15px;
 						margin: 0 11px 0 11px;
@@ -749,18 +645,24 @@ body {
 						.align-items(@align: center);
 						font: 1.1em @fontFamBold;
 						cursor: pointer;
+						.linear_transitions(@ms: 0.2s);
 						&.active_btn {
 							@media @tablet {
 								//							padding: 0 5px 0 5px;
 								height: 38px;
+								border-bottom: 4px solid #fff;
 							}
 							background: @mainGreenColor;
-							height: 47px;
+							height: 43px;
+							border-bottom: 4px solid @mainGreenColor;
 							color: #fff;
 						}
 					}
 				}
 				.head_add {
+					@media @tablet {
+						padding: 0 10px 0 10px;
+					}
 					.flex-display(@display: flex);
 					.flex-flow(@flow: column nowrap);
 					div {
@@ -768,6 +670,8 @@ body {
 						.justify-content(@justify: space-between);
 						.align-content(@align: space-between);
 						.flex-grow(@grow: 1);
+						.flex-flow(@flow: row wrap);
+						//						.linear_transitions(@ms: 0.2s);
 						display: none;
 						display: inherit;
 						//						&.active_head_add {
@@ -776,7 +680,7 @@ body {
 						span {
 							.flex-basis(@width: 290px);
 							.flex-grow(@grow: 1);
-							padding: 0 54px 0 0;
+							padding: 0 54px 20px 0;
 						}
 					}
 				}
@@ -790,8 +694,12 @@ body {
 			}
 		}
 		footer {
+			@media @tablet {
+				height: inherit;
+				padding: 0 10px 0 10px;
+			}
 			.flex-display(@display: flex);
-			.flex-flow(@flow: row nowrap);
+			.flex-flow(@flow: row wrap);
 			.flex-basis(@width: 100%);
 			.justify-content(@justify: space-between);
 			//				.align-content(@align: center);
@@ -801,10 +709,15 @@ body {
 			padding: 0 50px 0 50px;
 			background: @mainGreenColor;
 			ul {
+				@media @tablet {
+					.flex-basis(@width: 100%);
+					//									.justify-content(@justify: flex-start);
+					//				.align-items(@align: flex-start);
+				}
 				.flex-display(@display: flex);
-				.flex-flow(@flow: row nowrap);
+				.flex-flow(@flow: row wrap);
 				//				.flex-basis(@width: 100%);
-				.justify-content(@justify: center);
+				.justify-content(@justify: flex-start);
 				.align-items(@align: center);
 				&:first-child {
 					li {
@@ -818,6 +731,9 @@ body {
 							margin: 0 8px 0 0;
 						}
 						span {
+							@media @tablet {
+								font-size: 0.9em;
+							}
 							color: #fff;
 						}
 					}
@@ -827,6 +743,9 @@ body {
 						margin: 0 0 0 10px;
 						a {
 							img {
+								@media @tablet {
+									width: 100px;
+								}
 								.linear_transitions(@ms: .1s)
 							}
 							&:hover {
@@ -843,3 +762,5 @@ body {
 		////////////////////////////////////////////////////////
 	}
 }
+
+@import "end.css";

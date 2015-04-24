@@ -11,7 +11,6 @@
 @mainHeadingColor: #4c4c4c;
 @fontFamReg: proxima_nova_rgregular;
 @fontFamBold: proxima_nova_rgbold;
-
 /////////////////////////////////////////////////////////////////////////////////////////////
 // linear transition
 .linear_transitions(@ms: .1s) {
@@ -23,14 +22,13 @@
 }
 
 //transition-delay
-.transition_delay(@ms: 500ms) {
+.transition-delay(@ms: 500ms) {
 	-webkit-transition-delay: @ms;
-    -moz-transition-delay: @ms;
-    -ms-transition-delay: @ms;
-    -o-transition-delay:@ms;
-    transition-delay: @ms;
+	-moz-transition-delay: @ms;
+	-ms-transition-delay: @ms;
+	-o-transition-delay: @ms;
+	transition-delay: @ms;
 }
-
 
 //transform-rotate
 .transform-rotate(@deg: 90deg) {
@@ -40,6 +38,20 @@
 	-ms-transform: rotate(@deg);
 	transform: rotate(@deg);
 }
+
+//border_radius
+.border-radius(@radius: 50px) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius: @radius;
+	border-radius: @radius;
+}
+//box_shadow
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////
 // --------------------------------------------------
@@ -233,6 +245,9 @@ body {
 		0,
 		0.2);
 		.catalogbtn {
+			@media @tablet {
+				//				position: inherit;
+			}
 			background-color: @mainGreenColor;
 			width: 40px;
 			height: 155px;
@@ -284,14 +299,16 @@ body {
 					//							background-color: pink;
 				}
 				@media @tablet {
-					//							background-color: pink;
+					z-index: 20;
+					left: -260px;
+					font-weight: normal;
 				}
 				position: absolute;
 				left: -174px;
 				opacity: 0;
 				top: 0;
 				z-index: 1;
-				width: 144px;
+				min-width: 144px;
 				padding: 15px;
 				overflow: hidden;
 				background: @mainGreenColor;
@@ -300,12 +317,29 @@ body {
 				list-style-type: disc;
 				list-style-position: inside;
 				//transition-delay
-//.transition_delay(@ms: 500ms) ;
-
-
+				//.transition-delay(@ms: 500ms) ;
 				.catmenuh {
+					@media @tablet {
+						font-size: 1.2em;
+						font-weight: normal;
+					}
 					border-bottom: 2px solid #fff;
 					margin: 0 0 15px 0;
+					padding: 0 0 10px 0;
+					.flex-display(@display: flex);
+					.flex-flow(@flow: row nowrap);
+					.align-items(@align: center);
+					img {
+						@media @tablet {
+							display: block;
+							.transform-rotate(@deg: 180deg);
+							margin: 0 10px 0 0;
+						}
+						display: none;
+						border: 2px solid #fff;
+						.border-radius(@radius: 100%);
+						padding: 5px;
+					}
 					span {
 						color: #fff;
 						font-weight: bold;
@@ -314,6 +348,11 @@ body {
 					}
 				}
 				li {
+					@media @tablet {
+						font-size: 1.1em;
+						line-height: 1.5em;
+						border-bottom: 1px solid #92BF2B;
+					}
 					color: #eaeaea;
 					a {
 						color: #fff;
@@ -327,7 +366,11 @@ body {
 					ul {
 						list-style: none;
 						padding: 0 0 0 15px;
+						@media @tablet {
+							padding: 0 0 0 20px;
+						}
 						li {
+							border: none;
 							a {
 								font-size: 0.9em;
 								font-weight: normal;
@@ -343,9 +386,11 @@ body {
 					@media @desktop {
 						left: 40px;
 					}
-
+					@media @tablet {
+						left: 0;
+						min-width: 260px
+					}
 					opacity: 1;
-
 				}
 			}
 			//				end_catalog
@@ -430,6 +475,11 @@ body {
 				//			end_top_navigation//////////////
 				////////////////////////////
 				.maglink_nphone {
+
+					@media @tablet{
+
+					}
+
 					margin: 21px 0 0 0;
 					// flex or inline-flex
 					.flex-display(@display: flex);
@@ -437,6 +487,8 @@ body {
 					.justify-content(@justify: space-around);
 					//                min-width: 1260px;
 					.flex-basis(@width: 100%);
+
+
 					a {
 						// flex or inline-flex
 						.flex-display(@display: flex);
@@ -451,7 +503,7 @@ body {
 							text-decoration: none;
 							span {
 								color: @mainTextColor;
-								font-size: 17px;
+								font-size: 1.1em;
 								//							font-weight: 700;
 								font-family: @fontFamBold;
 							}
@@ -481,7 +533,7 @@ body {
 						}
 						&:last-child {
 							color: @mainTextColor;
-							font-size: 1.3em;
+							font-size: 1.5em;
 						}
 					}
 				}
@@ -588,6 +640,7 @@ body {
 						// flex-start | flex-end | center | baseline | stretch
 						.align-items(@align: center);
 						.flex-basis(@width: 1160px);
+						margin: 0 0 20px 0;
 						li {
 							margin: 0 15px 0 0;
 							border: 1px solid @mainGrayColor;

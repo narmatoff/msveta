@@ -114,7 +114,7 @@ body .mn_wpr .catalogbtn .catalog {
   opacity: 0;
   top: 0;
   z-index: 1;
-  width: 144px;
+  min-width: 144px;
   padding: 15px;
   overflow: hidden;
   background: #79b021;
@@ -126,9 +126,55 @@ body .mn_wpr .catalogbtn .catalog {
   list-style-type: disc;
   list-style-position: inside;
 }
+@media only screen and (max-width:480px) {
+  body .mn_wpr .catalogbtn .catalog {
+    z-index: 20;
+    left: -260px;
+    font-weight: normal;
+  }
+}
 body .mn_wpr .catalogbtn .catalog .catmenuh {
   border-bottom: 2px solid #fff;
   margin: 0 0 15px 0;
+  padding: 0 0 10px 0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: -ms-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  -moz-flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+@media only screen and (max-width:480px) {
+  body .mn_wpr .catalogbtn .catalog .catmenuh {
+    font-size: 1.2em;
+    font-weight: normal;
+  }
+}
+body .mn_wpr .catalogbtn .catalog .catmenuh img {
+  display: none;
+  border: 2px solid #fff;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  border-radius: 100%;
+  padding: 5px;
+}
+@media only screen and (max-width:480px) {
+  body .mn_wpr .catalogbtn .catalog .catmenuh img {
+    display: block;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    margin: 0 10px 0 0;
+  }
 }
 body .mn_wpr .catalogbtn .catalog .catmenuh span {
   color: #fff;
@@ -138,6 +184,13 @@ body .mn_wpr .catalogbtn .catalog .catmenuh span {
 }
 body .mn_wpr .catalogbtn .catalog li {
   color: #eaeaea;
+}
+@media only screen and (max-width:480px) {
+  body .mn_wpr .catalogbtn .catalog li {
+    font-size: 1.1em;
+    line-height: 1.5em;
+    border-bottom: 1px solid #92BF2B;
+  }
 }
 body .mn_wpr .catalogbtn .catalog li a {
   color: #fff;
@@ -151,6 +204,14 @@ body .mn_wpr .catalogbtn .catalog li a:hover {
 body .mn_wpr .catalogbtn .catalog li ul {
   list-style: none;
   padding: 0 0 0 15px;
+}
+@media only screen and (max-width:480px) {
+  body .mn_wpr .catalogbtn .catalog li ul {
+    padding: 0 0 0 20px;
+  }
+}
+body .mn_wpr .catalogbtn .catalog li ul li {
+  border: none;
 }
 body .mn_wpr .catalogbtn .catalog li ul li a {
   font-size: 0.9em;
@@ -166,6 +227,12 @@ body .mn_wpr .catalogbtn .catalog.showCat {
 @media only screen and (max-width:1620px) {
   body .mn_wpr .catalogbtn .catalog.showCat {
     left: 40px;
+  }
+}
+@media only screen and (max-width:480px) {
+  body .mn_wpr .catalogbtn .catalog.showCat {
+    left: 0;
+    min-width: 260px;
   }
 }
 body .mn_wpr .sec_wrp {
@@ -289,7 +356,7 @@ body .mn_wpr .sec_wrp header .maglink_nphone a:last-child {
 }
 body .mn_wpr .sec_wrp header .maglink_nphone a:last-child span {
   color: #333333;
-  font-size: 17px;
+  font-size: 1.1em;
   font-family: proxima_nova_rgbold;
 }
 body .mn_wpr .sec_wrp header .maglink_nphone a span {
@@ -323,7 +390,7 @@ body .mn_wpr .sec_wrp header .nametitle span:first-child {
 }
 body .mn_wpr .sec_wrp header .nametitle span:last-child {
   color: #333333;
-  font-size: 1.3em;
+  font-size: 1.5em;
 }
 body .mn_wpr .sec_wrp .main_flexslider {
   -webkit-flex-basis: 100%;
@@ -484,6 +551,7 @@ body .mn_wpr .sec_wrp section .brends_b ul {
   -moz-flex-basis: 1160px;
   -ms-flex-basis: 1160px;
   flex-basis: 1160px;
+  margin: 0 0 20px 0;
 }
 @media only screen and (max-width:480px) {
   body .mn_wpr .sec_wrp section .brends_b ul {

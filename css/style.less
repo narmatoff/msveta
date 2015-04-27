@@ -1,11 +1,11 @@
 html {
 	height: 100%;
 	width: 100%;
-	@media @tablet {
+	@media @tablet, @l_tablet {
 		min-width: 100%;
 	}
 	body {
-		@media @tablet {
+		@media @tablet, @l_tablet {
 			font-size: 1em;
 			width: 100%;
 		}
@@ -13,7 +13,7 @@ html {
 		width: 100%;
 		height: 100%;
 		.bgimg {
-			@media @tablet {
+			@media @tablet, @l_tablet {
 				display: none;
 			}
 			position: fixed;
@@ -28,7 +28,8 @@ html {
 			@media @desktop {
 				overflow: hidden;
 			}
-			@media @tablet {
+			@media @tablet,
+			@l_tablet {
 				min-width: 100%;
 				width: 100%;
 			}
@@ -47,7 +48,7 @@ html {
 			@spread: 0,
 			@alpha: 0.2);
 			.catalogbtn {
-				@media @tablet {
+				@media @tablet, @l_tablet {
 					//				position: inherit;
 					width: 30px;
 					height: 120px;
@@ -105,7 +106,8 @@ html {
 					@media @desktop {
 						//							background-color: pink;
 					}
-					@media @tablet {
+					@media @tablet,
+					@l_tablet {
 						z-index: 20;
 						left: -260px;
 						font-weight: normal;
@@ -126,7 +128,7 @@ html {
 					//transition-delay
 					//.transition-delay(@ms: 500ms) ;
 					.catmenuh {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							font-size: 1.4em;
 							font-weight: normal;
 						}
@@ -137,7 +139,7 @@ html {
 						.flex-flow(@flow: row nowrap);
 						.align-items(@align: center);
 						img {
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								display: block;
 								.transform-rotate(@deg: 180deg);
 								margin: 0 10px 0 0;
@@ -155,7 +157,7 @@ html {
 						}
 					}
 					li {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							font-size: 1.3em;
 							line-height: 1.5em;
 							border-bottom: 1px solid #92BF2B;
@@ -174,11 +176,11 @@ html {
 						ul {
 							list-style: none;
 							padding: 0 0 0 15px;
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								padding: 0 0 0 15px;
 							}
 							li {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									padding: 0 0 0 0;
 								}
 								border: none;
@@ -197,7 +199,8 @@ html {
 						@media @desktop {
 							left: 40px;
 						}
-						@media @tablet {
+						@media @tablet,
+						@l_tablet {
 							left: 0;
 							min-width: 260px
 						}
@@ -209,12 +212,12 @@ html {
 			////////////////////////////////////////////////////////
 			//		second wrapper
 			.sec_wrp {
-				@media @tablet {
+				@media @tablet, @l_tablet {
 					width: 100%;
 					min-width: 100%;
 				}
 				header {
-					@media @tablet {}
+					@media @tablet, @l_tablet {}
 					height: 280px;
 					width: 100%;
 					// outline: 1px dotted blue;
@@ -222,13 +225,10 @@ html {
 					//			top_navigation//////////////
 					////////////////////////////
 					nav {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							width: auto;
 							//							display: none;
 							border: none;
-						}
-						@media @mini_tablet {
-							//							flex-basis: 420px;
 						}
 						height: 69px;
 						width: 1160px;
@@ -237,7 +237,7 @@ html {
 						//				outline: 1px dotted red;
 						border-bottom: 1px solid @mainGrayColor;
 						ul {
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								width: auto;
 								display: none;
 							}
@@ -279,12 +279,14 @@ html {
 							}
 						}
 						.logotipe {
-							@media @tablet {
-								left: 38%;
+							@media @tablet, @l_tablet {
+								left: 50%;
+								margin-left: -50px;
 								padding: 0;
 							}
 							@media @mini_tablet {
-								left: 34%;
+								left: 50%;
+								margin-left: -50px;
 								padding: 0;
 							}
 							position: absolute;
@@ -295,7 +297,7 @@ html {
 							display: block;
 							margin: 0 auto;
 							img {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									height: 100px;
 								}
 							}
@@ -306,7 +308,7 @@ html {
 					//			end_top_navigation//////////////
 					////////////////////////////
 					.maglink_nphone {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							// flex or inline-flex
 							.flex-display(@display: flex);
 							// flex-start | flex-end | center | space-between | space-around
@@ -328,7 +330,7 @@ html {
 						//                min-width: 1260px;
 						.flex-basis(@width: 100%);
 						a {
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								.flex-basis(@width: 140px);
 								.flex-wrap(@wrap: 1);
 								// <flex-direction> // row | row-reverse | column | column-reverse ||||||| <flex-wrap> // nowrap | wrap | wrap-reverse
@@ -345,7 +347,7 @@ html {
 							&:first-child {
 								text-decoration: none;
 								span {
-									@media @tablet {
+									@media @tablet, @l_tablet {
 										font-size: 0.9em;
 										color: @mainLinkColor;
 										text-decoration: underline;
@@ -361,7 +363,7 @@ html {
 									//							font-weight: 700;
 									font-family: @fontFamBold;
 									.recall {
-										@media @tablet {
+										@media @tablet, @l_tablet {
 											display: none;
 										}
 										display: block;
@@ -371,7 +373,7 @@ html {
 							&:last-child {
 								text-decoration: none;
 								span {
-									@media @tablet {
+									@media @tablet, @l_tablet {
 										font-size: 0.9em;
 										color: @mainLinkColor;
 										text-decoration: underline;
@@ -387,7 +389,7 @@ html {
 									//							font-weight: 700;
 									font-family: @fontFamBold;
 									.recall {
-										@media @tablet {
+										@media @tablet, @l_tablet {
 											display: block;
 										}
 										display: none;
@@ -396,7 +398,7 @@ html {
 							}
 							img {}
 							span {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									font-family: @fontFamBold;
 								}
 								color: inherit;
@@ -404,7 +406,7 @@ html {
 						}
 					}
 					.nametitle {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							margin: 80px 0 0 0;
 						}
 						// flex or inline-flex
@@ -417,7 +419,7 @@ html {
 						.flex-basis(@width: 100%);
 						span {
 							&:first-child {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									font-size: 2.3em;
 								}
 								color: @mainLTextColor;
@@ -427,7 +429,7 @@ html {
 								margin: 0 18px 20px 18px;
 							}
 							&:last-child {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									font-size: 1.3em;
 								}
 								text-align: center;
@@ -447,7 +449,7 @@ html {
 				.flex-flow(@flow: row wrap);
 				.main_flexslider {
 					.flex-direction-nav {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							display: none;
 						}
 					}
@@ -458,7 +460,7 @@ html {
 					border-bottom: 2px solid #79b021;
 				}
 				section {
-					@media @tablet {
+					@media @tablet, @l_tablet {
 						padding: 0 10px 10px 10px;
 					}
 					//				outline: 1px dotted red;
@@ -466,7 +468,7 @@ html {
 					.flex-basis(@width: 640px);
 					margin: 60px 0 0 0;
 					.heading {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							font-size: 0.8em;
 						}
 						.flex-basis(@width: 100%);
@@ -479,16 +481,13 @@ html {
 						}
 					}
 					.newsblock {
-						//										@media @tablet{
-						//						padding: 0 10px 10px 10px;
-						//					}
 						.flex-display(@display: flex);
 						// <flex-direction> || <flex-wrap>
 						.flex-flow(@flow: row-reverse wrap-reverse);
 						// flex-start | flex-end | center | space-between | space-around
 						.justify-content(@justify: space-between);
 						li {
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								.flex-basis(@width: 100%);
 							}
 							.flex-display(@display: flex);
@@ -528,7 +527,7 @@ html {
 						font-size: 2.4em;
 					}
 					article {
-						@media @tablet {}
+						@media @tablet, @l_tablet {}
 						h2 {
 							color: @mainHeadingColor;
 							font-size: 2.1em;
@@ -550,7 +549,7 @@ html {
 						p {}
 					}
 					.brends_b {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							.flex-flow(@flow: row wrap);
 							//						padding: 0 10px 10px 10px;
 						}
@@ -562,7 +561,7 @@ html {
 						// flex-start | flex-end | center | baseline | stretch
 						.align-items(@align: center);
 						ul {
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								.flex-basis(@width: 100%);
 							}
 							.flex-display(@display: flex);
@@ -586,7 +585,7 @@ html {
 					}
 				}
 				aside {
-					@media @tablet {
+					@media @tablet, @l_tablet {
 						display: none;
 					}
 					.flex-basis(@width: 440px);
@@ -640,7 +639,7 @@ html {
 					}
 				}
 				.contacts {
-					@media @tablet {
+					@media @tablet, @l_tablet {
 						//						background-color: aqua;
 						width: 100%;
 					}
@@ -650,7 +649,7 @@ html {
 					margin: 60px 0 0 0;
 					//				padding: 0 10px 0 10px;
 					.heading {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							padding: 20px 10px 0 10px;
 							.justify-content(@justify: center);
 						}
@@ -670,7 +669,7 @@ html {
 						// linear transition
 						////////////////////////////////////////////////////////////////////////////////////////
 						span {
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								.flex-basis(@width: 100%);
 								margin: 0 0 20px 0;
 							}
@@ -679,7 +678,7 @@ html {
 							margin: 0 15px 0 0
 						}
 						div {
-							@media @tablet {
+							@media @tablet, @l_tablet {
 								padding: 8px 10px 8px 10px;
 								height: 38px;
 								margin: 0 10px 10px 0;
@@ -705,7 +704,7 @@ html {
 							cursor: pointer;
 							.linear_transitions(@ms: 0.2s);
 							&.active_btn {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									//							padding: 0 5px 0 5px;
 									height: 38px;
 									border-bottom: 4px solid #fff;
@@ -718,7 +717,7 @@ html {
 						}
 					}
 					.head_add {
-						@media @tablet {
+						@media @tablet, @l_tablet {
 							padding: 0 10px 0 10px;
 							font-size: 0.9em;
 						}
@@ -753,7 +752,7 @@ html {
 				}
 			}
 			footer {
-				@media @tablet {
+				@media @tablet, @l_tablet {
 					height: inherit;
 					padding: 0 10px 0 10px;
 					font-size: 0.9em;
@@ -769,7 +768,7 @@ html {
 				padding: 0 50px 0 50px;
 				background: @mainGreenColor;
 				ul {
-					@media @tablet {
+					@media @tablet, @l_tablet {
 						//						.flex-basis(@width: 100%);
 						.align-items(@align: flex-start);
 						padding: 10px 0 10px 0;
@@ -780,7 +779,7 @@ html {
 					.justify-content(@justify: flex-start);
 					.align-items(@align: center);
 					&:first-child {
-						@media @tablet {}
+						@media @tablet, @l_tablet {}
 						li {
 							.flex-display(@display: flex);
 							.flex-flow(@flow: row nowrap);
@@ -790,13 +789,13 @@ html {
 							//
 							margin: 0 54px 0 0;
 							img {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									display: none;
 								}
 								margin: 0 8px 0 0;
 							}
 							span {
-								@media @tablet {
+								@media @tablet, @l_tablet {
 									//									font-size: 0.9em;
 								}
 								color: #fff;
@@ -804,7 +803,7 @@ html {
 						}
 					}
 					&:last-child {
-						@media @tablet {}
+						@media @tablet, @l_tablet {}
 						.flex-flow(@flow: row wrap);
 						.flex-basis(@width: 245px);
 						.justify-content(@justify: center);
@@ -813,7 +812,7 @@ html {
 							margin: 0 0 0 10px;
 							a {
 								img {
-									@media @tablet {
+									@media @tablet, @l_tablet {
 										width: 40px;
 									}
 									.linear_transitions(@ms: .1s)

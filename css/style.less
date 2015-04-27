@@ -2,11 +2,11 @@ html {
 	height: 100%;
 	width: 100%;
 	@media @tablet {
-		min-width: 480px;
+		min-width: 100%;
 	}
 	body {
 		@media @tablet {
-			font-size: 1.2em;
+			font-size: 1em;
 			width: 100%;
 		}
 		position: absolute;
@@ -29,8 +29,8 @@ html {
 				overflow: hidden;
 			}
 			@media @tablet {
-				min-width: 480px;
-				width: 480px;
+				min-width: 100%;
+				width: 100%;
 			}
 			//		outline: 1px dotted red;
 			position: relative;
@@ -49,6 +49,11 @@ html {
 			.catalogbtn {
 				@media @tablet {
 					//				position: inherit;
+					width: 30px;
+					height: 120px;
+					//					opacity: 0.7;
+					font-size: 0.8em;
+					top: 130px;
 				}
 				background-color: @mainGreenColor;
 				width: 40px;
@@ -122,7 +127,7 @@ html {
 					//.transition-delay(@ms: 500ms) ;
 					.catmenuh {
 						@media @tablet {
-							font-size: 1.2em;
+							font-size: 1.4em;
 							font-weight: normal;
 						}
 						border-bottom: 2px solid #fff;
@@ -151,9 +156,10 @@ html {
 					}
 					li {
 						@media @tablet {
-							font-size: 1.1em;
+							font-size: 1.3em;
 							line-height: 1.5em;
 							border-bottom: 1px solid #92BF2B;
+							padding: 6px 0 6px 0
 						}
 						color: #eaeaea;
 						a {
@@ -169,9 +175,12 @@ html {
 							list-style: none;
 							padding: 0 0 0 15px;
 							@media @tablet {
-								padding: 0 0 0 20px;
+								padding: 0 0 0 15px;
 							}
 							li {
+								@media @tablet {
+									padding: 0 0 0 0;
+								}
 								border: none;
 								a {
 									font-size: 0.9em;
@@ -201,10 +210,11 @@ html {
 			//		second wrapper
 			.sec_wrp {
 				@media @tablet {
-					width: 480px;
-					min-width: 480px;
+					width: 100%;
+					min-width: 100%;
 				}
 				header {
+					@media @tablet {}
 					height: 280px;
 					width: 100%;
 					// outline: 1px dotted blue;
@@ -216,6 +226,9 @@ html {
 							width: auto;
 							//							display: none;
 							border: none;
+						}
+						@media @mini_tablet {
+							//							flex-basis: 420px;
 						}
 						height: 69px;
 						width: 1160px;
@@ -267,7 +280,11 @@ html {
 						}
 						.logotipe {
 							@media @tablet {
-								left: 190px;
+								left: 38%;
+								padding: 0;
+							}
+							@media @mini_tablet {
+								left: 34%;
 								padding: 0;
 							}
 							position: absolute;
@@ -297,6 +314,7 @@ html {
 							//                min-width: 1260px;
 							//						.flex-wrap(@wrap: 1);
 							.flex-flow(@flow: row nowrap);
+							.flex-basis(@width: 480px);
 							position: absolute;
 							top: 0;
 							width: 100%;
@@ -324,15 +342,45 @@ html {
 							.flex-basis(@width: 190px);
 							text-align: center;
 							font-size: 1em;
-							&:last-child {
+							&:first-child {
 								text-decoration: none;
 								span {
 									@media @tablet {
+										font-size: 0.9em;
 										color: @mainLinkColor;
 										text-decoration: underline;
 										&:hover {
 											text-decoration: none;
 										}
+									}
+									@media @mini_tablet {
+										display: none;
+									}
+									color: @mainTextColor;
+									font-size: 1em;
+									//							font-weight: 700;
+									font-family: @fontFamBold;
+									.recall {
+										@media @tablet {
+											display: none;
+										}
+										display: block;
+									}
+								}
+							}
+							&:last-child {
+								text-decoration: none;
+								span {
+									@media @tablet {
+										font-size: 0.9em;
+										color: @mainLinkColor;
+										text-decoration: underline;
+										&:hover {
+											text-decoration: none;
+										}
+									}
+									@media @mini_tablet {
+										display: none;
 									}
 									color: @mainTextColor;
 									font-size: 1em;
@@ -370,7 +418,7 @@ html {
 						span {
 							&:first-child {
 								@media @tablet {
-									font-size: 2.8em;
+									font-size: 2.3em;
 								}
 								color: @mainLTextColor;
 								font-size: 3.1em;
@@ -382,6 +430,7 @@ html {
 								@media @tablet {
 									font-size: 1.3em;
 								}
+								text-align: center;
 								color: @mainTextColor;
 								font-size: 1.5em;
 							}
@@ -397,6 +446,11 @@ html {
 				// <flex-direction> || <flex-wrap>
 				.flex-flow(@flow: row wrap);
 				.main_flexslider {
+					.flex-direction-nav {
+						@media @tablet {
+							display: none;
+						}
+					}
 					//            width: 1160px;
 					.flex-basis(@width: 100%);
 					margin: 0 auto;
@@ -412,9 +466,9 @@ html {
 					.flex-basis(@width: 640px);
 					margin: 60px 0 0 0;
 					.heading {
-						//					@media @tablet{
-						//						padding: 0 10px 10px 10px;
-						//					}
+						@media @tablet {
+							font-size: 0.8em;
+						}
 						.flex-basis(@width: 100%);
 						border-bottom: 3px solid @mainGreenColor;
 						padding: 0 0 10px 0;
@@ -472,30 +526,28 @@ html {
 					h1 {
 						color: @mainHeadingColor;
 						font-size: 2.4em;
-						line-height: 0.8em;
 					}
 					article {
-						//										@media @tablet{
-						//						padding: 0 10px 10px 10px;
-						//					}
+						@media @tablet {}
 						h2 {
 							color: @mainHeadingColor;
 							font-size: 2.1em;
 							margin: 15px 0 15px 0;
-							line-height: 0.8em;
+							line-height: 0.9em;
 						}
 						h3 {
 							color: @mainHeadingColor;
 							font-size: 1.9em;
 							margin: 15px 0 15px 0;
-							line-height: 0.8em;
+							line-height: 0.9em;
 						}
 						h4 {
 							color: @mainHeadingColor;
 							font-size: 1.5em;
 							margin: 15px 0 15px 0;
-							line-height: 0.8em;
+							line-height: 0.9em;
 						}
+						p {}
 					}
 					.brends_b {
 						@media @tablet {
@@ -521,7 +573,7 @@ html {
 							.flex-basis(@width: 1160px);
 							margin: 0 0 20px 0;
 							li {
-								margin: 0 15px 0 0;
+								margin: 0 15px 15px 0;
 								border: 1px solid @mainGrayColor;
 								a {}
 							}
@@ -587,14 +639,20 @@ html {
 						}
 					}
 				}
-				div.contacts {
-					.flex-basis(@width: 100%);
+				.contacts {
+					@media @tablet {
+						//						background-color: aqua;
+						width: 100%;
+					}
+					//					.flex-basis(@width: 100%);
+					width: 100%;
 					//				outline: 1px dotted red;
 					margin: 60px 0 0 0;
 					//				padding: 0 10px 0 10px;
 					.heading {
 						@media @tablet {
 							padding: 20px 10px 0 10px;
+							.justify-content(@justify: center);
 						}
 						.flex-display(@display: flex);
 						.flex-basis(@width: 100%);
@@ -604,7 +662,7 @@ html {
 						// flex-start | flex-end | center | space-between | space-around | stretch
 						.align-content(@align: space-between);
 						// flex-start | flex-end | center | space-between | space-around
-						.justify-content(@justify: space-around);
+						.justify-content(@justify: flex-start);
 						border-top: 1px solid @mainGrayColor;
 						border-bottom: 3px solid @mainGreenColor;
 						padding: 20px 0 0 0;
@@ -622,11 +680,12 @@ html {
 						}
 						div {
 							@media @tablet {
-								padding: 0 8px 0 8px;
+								padding: 8px 10px 8px 10px;
 								height: 38px;
 								margin: 0 10px 10px 0;
-								.flex-basis(@width: 40%);
-								font-size: 0.9em;
+								.flex-basis(@width: 170px);
+								.justify-content(@justify: center);
+								//								width: 100%;
 								///////////////////////////////////////////////////////////////
 								///////////////////////////////////////////////////////////////
 								///////////////////////////////////////////////////////////////
@@ -642,7 +701,7 @@ html {
 							.justify-content(@justify: center);
 							// flex-start | flex-end | center | baseline | stretch
 							.align-items(@align: center);
-							font: 1.1em @fontFamBold;
+							font: 1em @fontFamBold;
 							cursor: pointer;
 							.linear_transitions(@ms: 0.2s);
 							&.active_btn {
@@ -661,6 +720,7 @@ html {
 					.head_add {
 						@media @tablet {
 							padding: 0 10px 0 10px;
+							font-size: 0.9em;
 						}
 						.flex-display(@display: flex);
 						.flex-flow(@flow: column nowrap);
@@ -696,9 +756,10 @@ html {
 				@media @tablet {
 					height: inherit;
 					padding: 0 10px 0 10px;
+					font-size: 0.9em;
 				}
 				.flex-display(@display: flex);
-				.flex-flow(@flow: row wrap);
+				.flex-flow(@flow: row nowrap);
 				.flex-basis(@width: 100%);
 				.justify-content(@justify: space-between);
 				//				.align-content(@align: center);
@@ -709,9 +770,9 @@ html {
 				background: @mainGreenColor;
 				ul {
 					@media @tablet {
-						.flex-basis(@width: 100%);
-						//									.justify-content(@justify: flex-start);
-						//				.align-items(@align: flex-start);
+						//						.flex-basis(@width: 100%);
+						.align-items(@align: flex-start);
+						padding: 10px 0 10px 0;
 					}
 					.flex-display(@display: flex);
 					.flex-flow(@flow: row wrap);
@@ -719,31 +780,41 @@ html {
 					.justify-content(@justify: flex-start);
 					.align-items(@align: center);
 					&:first-child {
+						@media @tablet {}
 						li {
 							.flex-display(@display: flex);
 							.flex-flow(@flow: row nowrap);
 							//				.flex-basis(@width: 100%);
 							.justify-content(@justify: center);
 							.align-items(@align: center);
+							//
 							margin: 0 54px 0 0;
 							img {
+								@media @tablet {
+									display: none;
+								}
 								margin: 0 8px 0 0;
 							}
 							span {
 								@media @tablet {
-									font-size: 0.9em;
+									//									font-size: 0.9em;
 								}
 								color: #fff;
 							}
 						}
 					}
 					&:last-child {
+						@media @tablet {}
+						.flex-flow(@flow: row wrap);
+						.flex-basis(@width: 245px);
+						.justify-content(@justify: center);
+						.align-items(@align: center);
 						li {
 							margin: 0 0 0 10px;
 							a {
 								img {
 									@media @tablet {
-										width: 100px;
+										width: 40px;
 									}
 									.linear_transitions(@ms: .1s)
 								}

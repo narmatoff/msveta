@@ -236,10 +236,15 @@ html {
 						position: relative;
 						//				outline: 1px dotted red;
 						border-bottom: 1px solid @mainGrayColor;
-						ul {
+						.top_menu {
 							@media @tablet, @l_tablet {
 								width: auto;
 								display: none;
+
+								&.show_top_menu{
+									display: block;
+									background-color: aqua;
+								}
 							}
 							list-style: none;
 							//					outline: 1px dotted red;

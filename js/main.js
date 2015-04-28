@@ -33,13 +33,22 @@ $(document).ready(function () {
 		$(".catalog").toggleClass("showCat");
 	});
 
-
-
-
-
 	$("body").click(function (event) {
 		if ($(event.target).closest(".catalogbtn").length === 0) {
 			$(".catalog").removeClass("showCat");
+		}
+	});
+//end catalog menu events
+
+//	top menu events
+	$(".burger_top_menu").click(function () {
+//		$(".catalog").toggle( "slow" );
+		$(".top_menu").toggleClass("show_top_menu");
+	});
+
+	$("body").click(function (event) {
+		if ($(event.target).closest(".burger_top_menu").length === 0) {
+			$(".top_menu").removeClass("show_top_menu");
 		}
 	});
 //end catalog menu events

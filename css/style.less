@@ -40,7 +40,7 @@ html {
 			min-width: 1260px;
 			min-height: 100%;
 			margin: 0 auto;
-			padding: 0 0 90px 0;
+			padding: 0;
 			background-color: #ffffff;
 			.box-shadow (@x: 0,
 			@y: 0,
@@ -565,7 +565,7 @@ html {
 					.newsblock {
 						.flex-display(@display: flex);
 						// <flex-direction> || <flex-wrap>
-						.flex-flow(@flow: row-reverse wrap-reverse);
+						.flex-flow(@flow: row wrap);
 						// flex-start | flex-end | center | space-between | space-around
 						.justify-content(@justify: space-between);
 						li {
@@ -733,7 +733,7 @@ html {
 					.heading {
 						@media @tablet, @l_tablet {
 							padding: 20px 10px 0 10px;
-							.justify-content(@justify: center);
+							.justify-content(@justify: flex-start);
 						}
 						.flex-display(@display: flex);
 						.flex-basis(@width: 100%);

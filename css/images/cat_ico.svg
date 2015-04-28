@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg version="1.0" id="иконка_каталога_1_"
+	 xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="13px" height="16px"
+	 viewBox="0 0 13 16" enable-background="new 0 0 13 16" xml:space="preserve">
+<g id="иконка_каталога">
+	<g>
+		<path fill="#79B021" d="M2.375,13.36c0,0.255,0.205,0.382,0.435,0.382h8.245v-0.713H2.81C2.579,13.029,2.375,13.156,2.375,13.36z
+			 M12,2v13l-9.292,0.067c-1.05,0-1.792-0.662-1.792-1.682v-0.052c0-1.02,0.743-1.579,1.792-1.579h8.347V0.004H1.529
+			c-0.845,0-1.536,0.688-1.536,1.529v11.852c0,1.556,1.203,2.601,2.714,2.601L13,16V2H12z"/>
+	</g>
+</g>
+</svg>

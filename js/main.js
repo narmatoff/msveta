@@ -53,5 +53,17 @@ $(document).ready(function () {
 	});
 //end catalog menu events
 
+//	fancybox_init
+	$("[rel='single_1']").fancybox({
+					caption : {
+						type : 'outside'
+					},
+					openEffect  : 'elastic',
+					closeEffect : 'elastic',
+					nextEffect  : 'elastic',
+					prevEffect  : 'elastic'
+				});
+
+
 
 });

@@ -195,7 +195,6 @@ html {
 							}
 						}
 					}
-
 					&.showCat {
 						@media @desktop {
 							left: 40px;
@@ -209,13 +208,11 @@ html {
 					}
 				}
 				//				end_catalog
-
-					&:hover{
-						.catalog{
+				&:hover {
+					.catalog {
 						opacity: 1;
-
-						}
 					}
+				}
 			}
 			////////////////////////////////////////////////////////
 			//		second wrapper
@@ -550,7 +547,7 @@ html {
 					}
 					//            width: 1160px;
 					.flex-basis(@width: 100%);
-					margin: 0 auto;
+					margin: 0 auto 60px auto;
 					overflow: hidden;
 					border-bottom: 2px solid #79b021;
 				}
@@ -561,10 +558,10 @@ html {
 					width: 100%;
 				}
 				.breadcrumbs {
-					@media @mini_tablet,@tablet,@l_tablet{
-								width: 90%;
+					@media @mini_tablet, @tablet, @l_tablet {
+						width: 90%;
 						padding: 0 10px 0 10px;
-							}
+					}
 					width: 100%;
 					margin: 10px 0 0 0;
 					font-size: 0.9em;
@@ -599,7 +596,7 @@ html {
 					//				outline: 1px dotted red;
 					// <width>
 					.flex-basis(@width: 640px);
-					margin: 60px 0 0 0;
+					margin: 0 0 0 0;
 					.heading {
 						@media @tablet, @l_tablet {
 							font-size: 0.8em;
@@ -743,8 +740,7 @@ html {
 							}
 						}
 						.type_pac_rside {
-
-							@media @mini_tablet,@tablet,@l_tablet{
+							@media @mini_tablet, @tablet, @l_tablet {
 								flex-basis: 100%;
 							}
 							//							outline: 1px dotted red;
@@ -848,8 +844,8 @@ html {
 									display: flex;
 									flex-flow: row wrap;
 									//justify-content: center;
-//										align-items: center;
-//										align-content: center;
+									//										align-items: center;
+									//										align-content: center;
 									flex-basis: 91.5%;
 									li {
 										@media @mini_tablet, @tablet {
@@ -857,14 +853,128 @@ html {
 										}
 										flex-basis: 30%;
 										margin: 0 5px 0 5px;
-
 										a {}
 									}
 								}
 							}
 						}
 					}
+					//					news block
+					&.news_block {
+						flex-basis: 100%;
+						.list_news {
+							@media @tablet, @mini_tablet, @l_tablet {
+								column-width: auto;
+								column-count: 1;
+								column-gap: 5.9em;
+							}
+							//							display: flex;
+							//							flex-flow: column wrap;
+							margin: 0 0 20px 0;
+							//							height: 700px;
+							max-width: 100%;
+							overflow: hidden;
+							column-width: auto;
+							column-count: 2;
+							column-gap: 5.9em;
+							.news_item {
+								//															@media @tablet,@mini_tablet,@l_tablet{
+								//
+								//
+								//							}
+								display: flex;
+								flex-flow: row nowrap;
+								//								justify-content: flex-start;
+								//								align-content: flex-start;
+								//								min-width: 535px;
+								//								width: 535px;
+								//								flex-basis: 535px;
+								padding: 20px 0 20px 0;
+								border-bottom: 1px dotted lighten(@mainLinkColor, 40%);
+								.date_news_item {
+									display: flex;
+									flex-flow: column nowrap;
+									//									outline: 1px dotted red;
+									min-width: 60px;
+									margin: 10px 23px 0 0;
+									span {
+										color: @mainOrangeColor;
+										//										font-size: 1em;
+										&:first-child {
+											font-size: 3.8em;
+										}
+										&:last-child {
+											margin: 10px 0 0 0;
+											font-size: 0.9em;
+											line-height: 1.3em;
+										}
+									}
+								}
+								.news_item_content {
+									h2 {
+										margin: 0;
+										a {
+											font-weight: bold;
+											text-decoration: none;
+											color: @mainTextColor;
+											&:hover {
+												text-decoration: underline;
+											}
+										}
+									}
+									span {
+										font-style: italic;
+										color: lighten(@mainTextColor, 35%);
+									}
+									p {}
+								}
+							}
+						}
+					}
 				}
+
+
+				.pagings{
+					display: flex;
+					flex-flow: row wrap;
+					flex-basis: 100%;
+					justify-content: center;
+					align-content: center;
+					align-items: center;
+					background-color: @lightBlue;
+					height: 40px;
+					padding: 10px;
+					span{
+						font-weight: bold;
+						margin: 0 10px 0 0;
+					}
+					ul{
+											display: flex;
+					flex-flow: row nowrap;
+//					flex-basis: 100%;
+						li{
+							a{
+								font-weight: bold;
+								margin: 0 6px 0 6px;
+								text-decoration: none;
+								&:hover{
+									text-decoration: underline;
+								}
+
+								&.current_page{
+									background-color: @mainGreenColor;
+									padding: 1px 5px 1px 5px;
+									color: #fff;
+									border-radius: 4px;
+								}
+
+							}
+						}
+					}
+
+				}
+
+
 				aside {
 					@media @tablet, @l_tablet {
 						display: none;
@@ -924,50 +1034,45 @@ html {
 							img {}
 						}
 					}
-
-					.aside_shopslinks{
+					.aside_shopslinks {
 						margin: 0 0 0 15px;
-
-						li{
+						li {
 							margin: 0 0 10px 0;
-							img{
+							img {
 								margin: 0 15px 0 0;
-
 							}
-							a{
-
-							}
+							a {}
 						}
 					}
 				}
 				.type_gallery {
 					flex-basis: 100%;
-					background-color: lighten(@mainGrayColor,11%);
+					background-color: lighten(@mainGrayColor, 11%);
 					margin: 30px 0 0 0;
 					padding: 20px;
 					ul {
-						@media @mini_tablet,@tablet{
-								justify-content: center;
-							}
+						@media @mini_tablet, @tablet {
+							justify-content: center;
+						}
 						display: flex;
 						flex-flow: row wrap;
-//						align-items: center;
-//						align-content: space-between;
+						//						align-items: center;
+						//						align-content: space-between;
 						justify-content: flex-start;
-//						outline: 1px dotted red;
+						//						outline: 1px dotted red;
 						li {
-//							@media @mini_tablet,@tablet,{
-//
-//							}
+							//							@media @mini_tablet,@tablet,{
+							//
+							//							}
 							min-width: 130px;
 							height: auto;
 							margin: 0 26px 26px 0;
 							a {
 								border: 1px solid @mainGrayColor;
-								img{
-//									transition: all 0.1s linear;
+								img {
+									//									transition: all 0.1s linear;
 									.linear_transitions(@ms: 0.1s);
-									&:hover{
+									&:hover {
 										opacity: 0.8;
 									}
 								}
@@ -1072,24 +1177,19 @@ html {
 							//						&.active_head_add {
 							//
 							//						}
-
-							.head_add_content{
+							.head_add_content {
 								.flex-basis(@width: 100%);
-//								.flex-grow(@grow: 1);
-								h4{
+								//								.flex-grow(@grow: 1);
+								h4 {
 									font-weight: bold;
 								}
-								p{
-
-								}
+								p {}
 							}
 							span {
 								.flex-basis(@width: 290px);
 								.flex-grow(@grow: 1);
 								padding: 0 54px 20px 0;
 							}
-
-
 						}
 					}
 					/////////////////////////////

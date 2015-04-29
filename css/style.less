@@ -553,6 +553,10 @@ html {
 					width: 100%;
 				}
 				.breadcrumbs {
+					@media @mini_tablet,@tablet,@l_tablet{
+								width: 90%;
+						padding: 0 10px 0 10px;
+							}
 					width: 100%;
 					margin: 10px 0 0 0;
 					font-size: 0.9em;
@@ -710,12 +714,11 @@ html {
 						flex-flow: row wrap;
 						align-content: space-between;
 						justify-content: space-between;
-						margin:40px 0 0 0;
+						margin: 40px 0 0 0;
 						padding: 0 0 20px 0;
-						border-bottom: 1px solid @mainGrayColor;
-
+						//						border-bottom: 1px solid @mainGrayColor;
 						.type_pac_main_img {
-							@media @tablet,@mini_tablet,@l_tablet{
+							@media @tablet, @mini_tablet, @l_tablet {
 								width: 170px;
 								height: 170px;
 								flex-basis: 170px;
@@ -726,18 +729,18 @@ html {
 							height: 26.25%;
 							border: 1px solid @mainGrayColor;
 							margin: 0 0 15px 0;
-
 							img {
-														align-content: center;
-						justify-content: center;
-
+								align-content: center;
+								justify-content: center;
 							}
 						}
-
 						.type_pac_rside {
-//							outline: 1px dotted red;
-							flex-basis: 69.407%;
 
+							@media @mini_tablet,@tablet,@l_tablet{
+								flex-basis: 100%;
+							}
+							//							outline: 1px dotted red;
+							flex-basis: 69.407%;
 							.type_pac_rside_h {
 								background-color: @mainGreenColor;
 								padding: 5px;
@@ -745,10 +748,7 @@ html {
 								display: flex;
 								flex-basis: 100%;
 								flex-flow: row nowrap;
-
-								img {
-
-								}
+								img {}
 								span {
 									margin: 0 0 0 10px;
 									color: #fff;
@@ -757,79 +757,104 @@ html {
 								}
 							}
 							.type_pac_rside_cats {
-//																	@media @tablet,
-//																	@mini_tablet {
-////																		flex-basis: 165px;
-//																		justify-content: center;
-//																		align-items: center;
-//																		align-content: center;
-//																	}
+								//																	@media @tablet,
+								//																	@mini_tablet {
+								////																		flex-basis: 165px;
+								//																		justify-content: center;
+								//																		align-items: center;
+								//																		align-content: center;
+								//																	}
 								display: flex;
 								flex-flow: row wrap;
 								align-content: flex-start;
 								justify-content: flex-start;
 								align-items: flex-start;
-
-//															height: 10%;
-
-
+								//															height: 10%;
 								li {
-									@media @tablet,@mini_tablet{
-										flex-basis: 45%;
-										min-width: 210px;
-																	align-content: center;
-								justify-content: flex-start;
-								align-items: flex-start;
+									@media @tablet, @mini_tablet {
+										flex-basis: 95%;
+										min-width: 95%;
+										align-content: center;
+										justify-content: flex-start;
+										align-items: flex-start;
 									}
-
 									display: flex;
 									flex-flow: row nowrap;
 									justify-content: flex-start;
 									align-content: center;
-									align-items: flex-start;
+									align-items: center;
 									height: inherit;
 									flex-basis: 200px;
-									min-width: 200px;
-
-									min-width: 40%;
+									min-width: 48%;
 									margin: 0 2.5px 5px 2.5px;
 									img {
 										margin: 0 5px 0 0;
 										width: 13px;
 										height: 16px;
-
 									}
 									a {}
 								}
 							}
 						}
-							.type_pac_price{
+						.type_pac_price {
+							display: flex;
+							flex-flow: row wrap;
+							flex-basis: 100%;
+							margin: 20px 0 20px 0;
+							padding: 0 0 20px 0;
+							border-bottom: 1px dotted darken(@mainGrayColor, 20%);
+							li {
+								@media @tablet, @mini_tablet {
+									flex-basis: 270px;
+								}
 								display: flex;
-								flex-flow: row wrap;
+								flex-flow: row nowrap;
+								//									align-content: flex-start;
+								align-items: flex-start;
+								flex-basis: 50%;
+								margin: 0 0 5px 0;
+								img {
+									margin: 0 5px 0 0;
+								}
+								a {}
+							}
+						}
+						.buy_block {
+							display: flex;
+							flex-flow: row wrap;
+							flex-basis: 100%;
+							h4 {
 								flex-basis: 100%;
-								margin: 20px 0 10px 0;
-
-								li{
-									@media @tablet,@mini_tablet{
-										flex-basis: 270px;
-									}
+								font-weight: bold;
+								font-size: 1.2em;
+								margin: 0 0 15px 0;
+							}
+							.buy_block_cont {
+								display: flex;
+								flex-flow: row nowrap;
+								flex-basis: 100%;
+								img {
+									margin: 0 10px 0 0;
+								}
+								.buy_block_cont_ul {
 									display: flex;
-									flex-flow: row nowrap;
-//									align-content: flex-start;
-									align-items: flex-start;
-									flex-basis: 50%;
-									margin: 0 0 5px 0;
+									flex-flow: row wrap;
+									//justify-content: center;
+//										align-items: center;
+//										align-content: center;
+									flex-basis: 91.5%;
+									li {
+										@media @mini_tablet, @tablet {
+											flex-basis: 100%;
+										}
+										flex-basis: 30%;
+										margin: 0 5px 0 5px;
 
-									img{
-										margin: 0 5px 0 0 ;
-
-									}
-									a{
-
+										a {}
 									}
 								}
 							}
-
+						}
 					}
 				}
 				aside {
@@ -889,6 +914,41 @@ html {
 						text-align: right;
 						a {
 							img {}
+						}
+					}
+				}
+				.type_gallery {
+					flex-basis: 100%;
+					background-color: lighten(@mainGrayColor,11%);
+					margin: 30px 0 0 0;
+					padding: 20px;
+					ul {
+						@media @mini_tablet,@tablet{
+								justify-content: center;
+							}
+						display: flex;
+						flex-flow: row wrap;
+//						align-items: center;
+//						align-content: space-between;
+						justify-content: flex-start;
+//						outline: 1px dotted red;
+						li {
+//							@media @mini_tablet,@tablet,{
+//
+//							}
+							min-width: 130px;
+							height: auto;
+							margin: 0 26px 26px 0;
+							a {
+								border: 1px solid @mainGrayColor;
+								img{
+//									transition: all 0.1s linear;
+									.linear_transitions(@ms: 0.1s);
+									&:hover{
+										opacity: 0.8;
+									}
+								}
+							}
 						}
 					}
 				}

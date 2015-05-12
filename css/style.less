@@ -221,6 +221,17 @@ html {
 					width: 100%;
 					min-width: 100%;
 				}
+
+				&.main_page{
+
+					section{
+						.flex-basis(@width: 640px);
+					}
+
+					aside{
+						.flex-basis(@width: 440px);
+					}
+				}
 				header {
 					@media @tablet, @l_tablet {}
 					height: 280px;
@@ -595,7 +606,7 @@ html {
 					}
 					//				outline: 1px dotted red;
 					// <width>
-					.flex-basis(@width: 640px);
+					.flex-basis(@width: 710px);
 					margin: 0 0 0 0;
 					.heading {
 						@media @tablet, @l_tablet {
@@ -677,6 +688,17 @@ html {
 							line-height: 0.9em;
 						}
 						p {}
+
+						table.contacts_tbl{
+							width: 100%;
+							outline: 1px dotted red;
+							tr{
+								td:first-child{
+									width: 200px;
+								}
+							}
+
+						}
 					}
 					.brends_b {
 						@media @tablet, @l_tablet {
@@ -729,8 +751,8 @@ html {
 								flex-basis: 170px;
 							}
 							display: flex;
-							flex-basis: 26.25%;
-							width: 26.25%;
+//							flex-basis: 26.25%;
+//							width: 26.25%;
 							height: 26.25%;
 							border: 1px solid @mainGrayColor;
 							margin: 0 0 15px 0;
@@ -972,9 +994,15 @@ html {
 					@media @tablet, @l_tablet {
 						display: none;
 					}
-					.flex-basis(@width: 440px);
-					//				outline: 1px dotted red;
+					.flex-basis(@width: 400px);
+					//outline: 1px dotted red;
 					margin: 60px 0 0 0;
+
+
+					&.contacts_asd{
+						background-color: @lightBlue;
+						padding: 35px 0 0 0;
+					}
 					.blog_b {
 						margin: 30px 0 0 0;
 						.flex-display(@display: flex);

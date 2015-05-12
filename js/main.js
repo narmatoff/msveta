@@ -12,43 +12,33 @@ $(document).ready(function () {
 	});
 
 
-
+//bookmarks for region area on main page
 	var locnHash = window.location.hash;
-
-	console.log(locnHash);
 
 	if (locnHash){
 //		console.log("не");
-			//bookmarks for region area on main page
-	$(locnHash).trigger('click');
-
-
-//		e.preventDefault();
-		$(".head_add div").hide(); //hide all content
-		$(locnHash).attr("class", ""); //reset ID
+$(".head_add div").hide(); //hide all content
+		$(".heading div").attr("class", ""); //reset ID
 		$(locnHash).attr("class", "active_btn"); // activate bookmark
-		$('#' + $(this).attr('title')).fadeIn(); // show content on current bookmark
-
-
+		$('#' + $(locnHash).attr('data-tab')).fadeIn(); // show content on current bookmark
 	}
-//	else{
-//
-//	}
-//	//bookmarks for region area on main page
-//	$(".head_add div").hide(); // hide content
-//	$(".heading div:first").attr("class", "active_btn"); // activate first bookmark
-//	$(".head_add div:first").fadeIn(); // show content
-//
-//
-//
-//	$('.heading div').click(function (e) {
-//		e.preventDefault();
-//		$(".head_add div").hide(); //hide all content
-//		$(".heading div").attr("class", ""); //reset ID
-//		$(this).attr("class", "active_btn"); // activate bookmark
-//		$('#' + $(this).attr('title')).fadeIn(); // show content on current bookmark
-//	});
+	else{
 
+	//bookmarks for region area on main page
+	$(".head_add div").hide(); // hide content
+	$(".heading div:first").attr("class", "active_btn"); // activate first bookmark
+	$(".head_add div:first").fadeIn(); // show content
+	}
+
+
+
+	$('.heading div').click(function (e) {
+		e.preventDefault();
+		$(".head_add div").hide(); //hide all content
+		$(".heading div").attr("class", ""); //reset ID
+		$(this).attr("class", "active_btn"); // activate bookmark
+		$('#' + $(this).attr('data-tab')).fadeIn(); // show content on current bookmark
+	});
 
 
 //	catalog menu events

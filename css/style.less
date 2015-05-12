@@ -932,9 +932,7 @@ html {
 						}
 					}
 				}
-
-
-				.pagings{
+				.pagings {
 					display: flex;
 					flex-flow: row wrap;
 					flex-basis: 100%;
@@ -944,37 +942,32 @@ html {
 					background-color: @lightBlue;
 					height: 40px;
 					padding: 10px;
-					span{
+					span {
 						font-weight: bold;
 						margin: 0 10px 0 0;
 					}
-					ul{
-											display: flex;
-					flex-flow: row nowrap;
-//					flex-basis: 100%;
-						li{
-							a{
+					ul {
+						display: flex;
+						flex-flow: row nowrap;
+						//					flex-basis: 100%;
+						li {
+							a {
 								font-weight: bold;
 								margin: 0 6px 0 6px;
 								text-decoration: none;
-								&:hover{
+								&:hover {
 									text-decoration: underline;
 								}
-
-								&.current_page{
+								&.current_page {
 									background-color: @mainGreenColor;
 									padding: 1px 5px 1px 5px;
 									color: #fff;
 									border-radius: 4px;
 								}
-
 							}
 						}
 					}
-
 				}
-
-
 				aside {
 					@media @tablet, @l_tablet {
 						display: none;

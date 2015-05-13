@@ -221,14 +221,11 @@ html {
 					width: 100%;
 					min-width: 100%;
 				}
-
-				&.main_page{
-
-					section{
+				&.main_page {
+					section {
 						.flex-basis(@width: 640px);
 					}
-
-					aside{
+					aside {
 						.flex-basis(@width: 440px);
 					}
 				}
@@ -322,9 +319,9 @@ html {
 								width: auto;
 								display: none;
 								&.show_top_menu {
-									display: flex;
-									flex-basis: 200px;
-									flex-flow: column nowrap;
+									.flex-display(@display: flex);
+									.flex-basis(@width: 200px);
+									.flex-flow(@flow: column nowrap);
 									position: absolute;
 									left: 0;
 									top: 0;
@@ -577,9 +574,10 @@ html {
 					margin: 10px 0 0 0;
 					font-size: 0.9em;
 					ul {
-						display: flex;
-						flex-basis: 100%;
-						flex-flow: row wrap;
+						.flex-display(@display: flex);
+						.flex-basis(@width: 100%);
+						.flex-flow(@flow: row wrap);
+						.flex-flow(@flow: row wrap);
 						list-style: disc;
 						padding: 0;
 						margin: 0;
@@ -688,27 +686,96 @@ html {
 							line-height: 0.9em;
 						}
 						p {}
-
-						table.contacts_tbl{
-							width: 100%;
-//							outline: 1px dotted red;
-							tr{
-//								outline: 1px dotted red;
-								td{
-
-//									outline: 1px dotted red;
-//									padding: 0 15px 0 0;
-									&:first-child{
-									width: 370px;
-
+						table {
+							width: inherit;
+							&.contacts_tbl {
+								thead {
+									//											display: block;
+									tr {
+										th {
+											text-align: left;
+											padding: 0 0 10px 0;
+										}
 									}
+								}
+								tbody {
+									tr {
+										padding: 15px 0 15px 0;
+										td {
+											&:first-child {
+												width: 50%;
+											}
+											h4 {
+												margin: 20px 0 10px 0;
+												padding: 0;
+											}
+										}
+									}
+								}
+								@media @tablet,
+								@mini_tablet {
+									thead {
+										display: block;
+										tr {
+											display: block;
+											position: absolute;
+											top: -9999px;
+											left: -9999px;
+											th {
+												display: block;
+											}
+										}
+									}
+									tbody {
+										display: block;
+										tr {
+											display: block;
+											//											border: 1px solid #ccc;
+											margin: 0 0 20px 0;
+											td {
+												/* Behave  like a "row" */
 
-									h4{
-										font-weight: bold;
+												display: block;
+												border: none;
+												border-bottom: 1px solid @mainGrayColor;
+												position: relative;
+												padding: 12px 0 12px 35%;
+												h4 {
+													margin: 0;
+													font-weight: bold;
+												}
+												&:nth-of-type(1):before {
+													content: "Адрес";
+													font-weight: bold;
+												}
+												&:nth-of-type(2):before {
+													content: "Режим работы";
+													font-weight: bold;
+												}
+												&:nth-of-type(3):before {
+													content: "Телефон";
+													font-weight: bold;
+												}
+												&:before {
+													/* Now like a table header */
+
+													position: absolute;
+													/* Top/left values mimic padding */
+
+													top: 6px;
+													left: 6px;
+													width: 45%;
+													padding: 6px 0px 12px 0;
+													white-space: nowrap;
+												}
+											}
+										}
+										/*
+	Label the data
+	*/
 									}
 								}
 							}
-
 						}
 					}
 					.brends_b {
@@ -747,7 +814,7 @@ html {
 						}
 					}
 					.type_pac {
-						display: flex;
+						.flex-display(@display: flex);
 						flex-basis: 100%;
 						flex-flow: row wrap;
 						align-content: space-between;
@@ -761,9 +828,9 @@ html {
 								height: 170px;
 								flex-basis: 170px;
 							}
-							display: flex;
-//							flex-basis: 26.25%;
-//							width: 26.25%;
+							.flex-display(@display: flex);
+							//							flex-basis: 26.25%;
+							//							width: 26.25%;
 							height: 26.25%;
 							border: 1px solid @mainGrayColor;
 							margin: 0 0 15px 0;
@@ -783,8 +850,9 @@ html {
 								padding: 5px;
 								margin: 0 0 10px 0;
 								display: flex;
-								flex-basis: 100%;
-								flex-flow: row nowrap;
+								.flex-display(@display: flex);
+								.flex-basis(@width: 100%);
+								.flex-flow(@flow: row nowrap);
 								img {}
 								span {
 									margin: 0 0 0 10px;
@@ -801,11 +869,11 @@ html {
 								//																		align-items: center;
 								//																		align-content: center;
 								//																	}
-								display: flex;
-								flex-flow: row wrap;
-								align-content: flex-start;
-								justify-content: flex-start;
-								align-items: flex-start;
+								.flex-display(@display: flex);
+								.flex-flow(@flow: row wrap);
+								.align-content(@align: flex-start);
+								.justify-content(@justify: flex-start);
+								.align-items(@align: flex-start);
 								//															height: 10%;
 								li {
 									@media @tablet, @mini_tablet {
@@ -815,11 +883,11 @@ html {
 										justify-content: flex-start;
 										align-items: flex-start;
 									}
-									display: flex;
-									flex-flow: row nowrap;
-									justify-content: flex-start;
-									align-content: center;
-									align-items: center;
+									.flex-display(@display: flex);
+									.flex-flow(@flow: row nowrap);
+									.justify-content(@justify: flex-start);
+									.align-content(@align: center);
+									.align-items(@align: center);
 									height: inherit;
 									flex-basis: 200px;
 									min-width: 48%;
@@ -834,9 +902,9 @@ html {
 							}
 						}
 						.type_pac_price {
-							display: flex;
-							flex-flow: row wrap;
-							flex-basis: 100%;
+							.flex-display(@display: flex);
+							.flex-flow(@flow: row wrap);
+							.flex-basis(@width: 100%);
 							margin: 20px 0 20px 0;
 							padding: 0 0 20px 0;
 							border-bottom: 1px dotted darken(@mainGrayColor, 20%);
@@ -845,10 +913,11 @@ html {
 									flex-basis: 270px;
 								}
 								display: flex;
-								flex-flow: row nowrap;
+								.flex-display(@display: flex);
+								.flex-flow(@flow: row nowrap);
 								//									align-content: flex-start;
-								align-items: flex-start;
-								flex-basis: 50%;
+								.align-items(@align: flex-start);
+								.flex-basis(@width: 50%);
 								margin: 0 0 5px 0;
 								img {
 									margin: 0 5px 0 0;
@@ -857,34 +926,34 @@ html {
 							}
 						}
 						.buy_block {
-							display: flex;
-							flex-flow: row wrap;
-							flex-basis: 100%;
+							.flex-display(@display: flex);
+							.flex-flow(@flow: row wrap);
+							.flex-basis(@width: 100%);
 							h4 {
-								flex-basis: 100%;
+								.flex-basis(@width: 100%);
 								font-weight: bold;
 								font-size: 1.2em;
 								margin: 0 0 15px 0;
 							}
 							.buy_block_cont {
-								display: flex;
-								flex-flow: row nowrap;
-								flex-basis: 100%;
+								.flex-display(@display: flex);
+								.flex-flow(@flow: row nowrap);
+								.flex-basis(@width: 100%);
 								img {
 									margin: 0 10px 0 0;
 								}
 								.buy_block_cont_ul {
-									display: flex;
-									flex-flow: row wrap;
+									.flex-display(@display: flex);
+									.flex-flow(@flow: row wrap);
 									//justify-content: center;
 									//										align-items: center;
 									//										align-content: center;
 									flex-basis: 91.5%;
 									li {
 										@media @mini_tablet, @tablet {
-											flex-basis: 100%;
+											.flex-basis(@width: 100%);
 										}
-										flex-basis: 30%;
+										.flex-basis(@width: 30%);
 										margin: 0 5px 0 5px;
 										a {}
 									}
@@ -915,8 +984,8 @@ html {
 								//
 								//
 								//							}
-								display: flex;
-								flex-flow: row nowrap;
+								.flex-display(@display: flex);
+								.flex-flow(@flow: row nowrap);
 								//								justify-content: flex-start;
 								//								align-content: flex-start;
 								//								min-width: 535px;
@@ -925,8 +994,8 @@ html {
 								padding: 20px 0 20px 0;
 								border-bottom: 1px dotted lighten(@mainLinkColor, 40%);
 								.date_news_item {
-									display: flex;
-									flex-flow: column nowrap;
+									.flex-display(@display: flex);
+									.flex-flow(@flow: column nowrap);
 									//									outline: 1px dotted red;
 									min-width: 60px;
 									margin: 10px 23px 0 0;
@@ -966,12 +1035,12 @@ html {
 					}
 				}
 				.pagings {
-					display: flex;
-					flex-flow: row wrap;
-					flex-basis: 100%;
-					justify-content: center;
-					align-content: center;
-					align-items: center;
+					.flex-display(@display: flex);
+					.flex-flow(@flow: row wrap);
+					.flex-basis(@width: 100%);
+					.justify-content(@justify: center);
+					.align-content(@align: center);
+					.align-items(@align: center);
 					background-color: @lightBlue;
 					height: 40px;
 					padding: 10px;
@@ -980,8 +1049,8 @@ html {
 						margin: 0 10px 0 0;
 					}
 					ul {
-						display: flex;
-						flex-flow: row nowrap;
+						.flex-display(@display: flex);
+						.flex-flow(@flow: row nowrap);
 						//					flex-basis: 100%;
 						li {
 							a {
@@ -1008,9 +1077,7 @@ html {
 					.flex-basis(@width: 400px);
 					//outline: 1px dotted red;
 					margin: 60px 0 0 0;
-
-
-					&.contacts_asd{
+					&.contacts_asd {
 						background-color: @lightBlue;
 						padding: 35px 0 0 0;
 					}

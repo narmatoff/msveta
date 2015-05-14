@@ -1300,22 +1300,15 @@ html {
 					}
 				}
 			}
+			//////////////////////////////////////////////////////////////////
+			/////////////////////////LAMPS TABLE//////////////////////////////
+			//////////////////////////////////////////////////////////////////
 			.lamps_table {
 				border: 1px solid @mainGrayColor;
 				width: 1110px;
 				margin: 0 auto;
 				padding: 5px;
 				display: block;
-
-				@media @tablet, @mini_tablet{
-					display: inherit;
-					width: inherit;
-					padding: 0;
-					border: none;
-				}
-//								  display: flex;
-				//				  justify-content: space-between;
-				//				  flex-flow: row wrap;
 				thead {
 					tr {
 						&:first-child {
@@ -1325,18 +1318,15 @@ html {
 								border: 3px solid #fff;
 								text-align: center;
 								vertical-align: middle;
-
 								&:first-child {
 									display: flex;
 									flex-flow: column nowrap;
-//									align-content: center;
+									//									align-content: center;
 									align-items: center;
-
 									justify-content: center;
 									margin: 0;
 									padding: 0;
 								}
-
 								///////////////////////////////////////////////////////////////////////////////
 								&:nth-of-type(2) {
 									background-color: @mainOrangeColor;
@@ -1353,13 +1343,8 @@ html {
 					}
 				}
 				tbody {
-					//					display: flex;
 					tr {
-
-						//						flex-basis: 100%;
 						td {
-							//							display: flex;
-							//							align-items: center;
 							width: 275px;
 							height: 119px;
 							border: 3px solid #fff;
@@ -1368,7 +1353,7 @@ html {
 							///////////////////////////////////////////////////////////////////////////////
 							&:nth-of-type(2) {
 								background-color: @mainOrangeColor;
-									text-align: center;
+								text-align: center;
 								vertical-align: middle;
 								span {
 									font-family: 'a_lcdnovaregular';
@@ -1379,7 +1364,7 @@ html {
 							}
 							&:nth-of-type(3) {
 								background-color: #d5c800;
-									text-align: center;
+								text-align: center;
 								vertical-align: middle;
 								span {
 									font-family: 'a_lcdnovaregular';
@@ -1390,7 +1375,7 @@ html {
 							}
 							&:nth-of-type(4) {
 								background-color: @mainGreenColor;
-									text-align: center;
+								text-align: center;
 								vertical-align: middle;
 								span {
 									font-family: 'a_lcdnovaregular';
@@ -1400,18 +1385,6 @@ html {
 								}
 							}
 							///////////////////////////////////////////////////////////////////////////////
-//							&:nth-of-type(1):before {
-//								content: "Адрес";
-//								font-weight: bold;
-//							}
-//							&:nth-of-type(2):before {
-//								content: "Режим работы";
-//								font-weight: bold;
-//							}
-//							&:nth-of-type(3):before {
-//								content: "Телефон";
-//								font-weight: bold;
-//							}
 							&:before {
 								/* Now like a table header */
 
@@ -1428,6 +1401,9 @@ html {
 					}
 				}
 			}
+			//////////////////////////////////////////////////////////////////
+			/////////////////////////LAMPS TABLE//////////////////////////////
+			//////////////////////////////////////////////////////////////////
 			footer {
 				@media @tablet, @l_tablet {
 					height: inherit;

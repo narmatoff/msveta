@@ -113,7 +113,7 @@ html {
 						font-weight: normal;
 					}
 					position: absolute;
-					left: -239px;
+					left: -230px;
 					opacity: 0;
 					top: 0;
 					z-index: 1;
@@ -1194,7 +1194,10 @@ html {
 								h4 {
 									font-weight: bold;
 								}
-								p {}
+								p {
+
+								}
+
 							}
 							span {
 								.flex-basis(@width: 290px);
@@ -1205,10 +1208,22 @@ html {
 					}
 					/////////////////////////////
 					.map_block {
+
 						.flex-basis(@width: 100%);
 						min-height: 400px;
 						//					outline: 1px dotted red;
 						margin: 37px 0 0 0;
+
+							&.ex_block{
+
+								@media @tablet,
+									@mini_tablet, @l_tablet {
+										padding:0;
+									}
+
+								background-color: #EDFBFE;
+								padding:1em 5em 1em 5em;
+							}
 					}
 				}
 			}

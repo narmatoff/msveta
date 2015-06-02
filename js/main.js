@@ -68,15 +68,16 @@ $(".head_add div").hide(); //hide all content
 //end catalog menu events
 
 //	fancybox_init
-//	$("[rel='single_1']").fancybox({
-//					caption : {
-//						type : 'outside'
-//					},
-//					openEffect  : 'elastic',
-//					closeEffect : 'elastic',
-//					nextEffect  : 'elastic',
-//					prevEffect  : 'elastic'
-//				});
+	$('rel=single_1]').fancybox({
+					caption : {
+						type : 'outside'
+					},
+					openEffect  : 'elastic',
+					closeEffect : 'elastic',
+					nextEffect  : 'elastic',
+					prevEffect  : 'elastic'
+
+				});
 
 
 

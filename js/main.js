@@ -12,22 +12,21 @@ $(document).ready(function () {
 	});
 
 
-//bookmarks for region area on main page
+	//bookmarks for region area on main page
 	var locnHash = window.location.hash;
 
-	if (locnHash){
-//		console.log("не");
-$(".head_add div").hide(); //hide all content
+	if (locnHash) {
+		//		console.log("не");
+		$(".head_add div").hide(); //hide all content
 		$(".heading div").attr("class", ""); //reset ID
 		$(locnHash).attr("class", "active_btn"); // activate bookmark
 		$('#' + $(locnHash).attr('data-tab')).fadeIn(); // show content on current bookmark
-	}
-	else{
+	} else {
 
-	//bookmarks for region area on main page
-	$(".head_add div").hide(); // hide content
-	$(".heading div:first").attr("class", "active_btn"); // activate first bookmark
-	$(".head_add div:first").fadeIn(); // show content
+		//bookmarks for region area on main page
+		$(".head_add div").hide(); // hide content
+		$(".heading div:first").attr("class", "active_btn"); // activate first bookmark
+		$(".head_add div:first").fadeIn(); // show content
 	}
 
 
@@ -41,9 +40,9 @@ $(".head_add div").hide(); //hide all content
 	});
 
 
-//	catalog menu events
+	//	catalog menu events
 	$(".catalogbtn").click(function () {
-//		$(".catalog").toggle( "slow" );
+		//		$(".catalog").toggle( "slow" );
 		$(".catalog").toggleClass("showCat");
 	});
 
@@ -52,11 +51,11 @@ $(".head_add div").hide(); //hide all content
 			$(".catalog").removeClass("showCat");
 		}
 	});
-//end catalog menu events
+	//end catalog menu events
 
-//	top menu events
+	//	top menu events
 	$(".burger_top_menu").click(function () {
-//		$(".catalog").toggle( "slow" );
+		//		$(".catalog").toggle( "slow" );
 		$(".top_menu").toggleClass("show_top_menu");
 	});
 
@@ -65,20 +64,22 @@ $(".head_add div").hide(); //hide all content
 			$(".top_menu").removeClass("show_top_menu");
 		}
 	});
-//end catalog menu events
+	//end catalog menu events
 
-//	fancybox_init
-	$('rel=single_1]').fancybox({
-					caption : {
-						type : 'outside'
-					},
-					openEffect  : 'elastic',
-					closeEffect : 'elastic',
-					nextEffect  : 'elastic',
-					prevEffect  : 'elastic'
+	//	fancybox_init
+//	$('rel=single_1]').fancybox({
+//		caption: {
+//			type: 'outside'
+//		},
+//		openEffect: 'elastic',
+//		closeEffect: 'elastic',
+//		nextEffect: 'elastic',
+//		prevEffect: 'elastic'
+//
+//	});
 
-				});
 
+$('#simple-example-table').stacktable({myClass:'tabletsClass lamps_table'});
 
 
 });

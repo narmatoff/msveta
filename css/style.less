@@ -1312,15 +1312,64 @@ html {
 			/////////////////////////LAMPS TABLE//////////////////////////////
 			//////////////////////////////////////////////////////////////////
 			.lamps_table {
+				@media @tablet, @mini_tablet {
+					display: none;
+					//						width: 100%;
+				}
+				&.tabletsClass {
+					@media @tablet, @mini_tablet {
+						display: block;
+						width: 100%;
+					}
+					display: none;
+					margin: 1em 0 1em 0;
+					padding: 1em 0 1em 0;
+					border: none;
+					border-top: 1px solid @mainGrayColor;
+					border-bottom: 1px solid @mainGrayColor;
+					tbody {
+						tr {
+							th {
+								&.st-head-row-main {
+									display: none;
+								}
+								&.st-head-row {
+									padding: 1em 0 1em 0
+								}
+							}
+							td {
+								&.st-key {
+									background-color: @mainGreenColor;
+									text-align: center;
+									vertical-align: middle;
+								}
+								&.st-val {
+									span {
+										line-height: 1em;
+									}
+								}
+							}
+						}
+					}
+				}
+				/////////////////////////////////////
+				//				responsive table styles
 				border: 1px solid @mainGrayColor;
 				width: 1110px;
 				margin: 0 auto;
 				padding: 5px;
 				display: block;
-				thead {
+				//				thead {
+				//					tr {
+				//					}
+				//				}
+				tbody {
 					tr {
 						&:first-child {
 							th {
+								//								&.st-head-row {
+								//									margin: 10em 0 10em 0;
+								//								}
 								width: 275px;
 								height: 119px;
 								border: 3px solid #fff;
@@ -1348,10 +1397,6 @@ html {
 								///////////////////////////////////////////////////////////////////////////////
 							}
 						}
-					}
-				}
-				tbody {
-					tr {
 						td {
 							width: 275px;
 							height: 119px;

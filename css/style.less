@@ -1044,6 +1044,70 @@ html {
 						a {
 							img {}
 						}
+						.partner_access {
+							//							background-color: #ffffff;
+							width: 320px;
+							height: 211px;
+							border: 1px solid #BED7E4;
+							display: flex;
+							flex-flow: column nowrap;
+							align-items: center;
+							justify-content: space-around;
+							//							align-content: space-around;
+							span {
+								width: 260px;
+								text-align: center;
+								font-weight: bold;
+								font-size: 1.1em;
+							}
+							input[type='text'],
+							input[type='password'] {
+								//								border: none;
+								border: 1px solid #C4D5E0;
+								border-radius: 5px;
+								background-color: #ffffff;
+								width: 260px;
+								height: 30px;
+								//								flex-basis: 260px;
+								padding: 0 0 0 1em;
+								margin: 0;
+								&:focus {
+									//									border: none;
+									outline: none;
+									border: 1px solid #C4D5E0;
+								}
+							}
+							input[type='button'] {
+								//								background-color: @mainGreenColor;
+								border: none;
+								border-radius: 5px;
+								background-color: @mainGreenColor;
+								width: 260px;
+								height: 35px;
+								color: #fff;
+								-webkit-box-shadow: 0px 3px 0px 0px darken(@mainGreenColor, 10%);
+								-moz-box-shadow: 0px 3px 0px 0px darken(@mainGreenColor, 10%);
+								box-shadow: 0px 3px 0px 0px darken(@mainGreenColor, 5%);
+								.linear_transitions(@ms: 0.1s);
+								&:hover {
+									background-color: darken(@mainGreenColor, 5%);
+									-webkit-box-shadow: 0px 3px 5px 0px darken(@mainGreenColor, 10%);
+									-moz-box-shadow: 0px 3px 5px 0px darken(@mainGreenColor, 10%);
+									box-shadow: 0px 3px 5px 0px darken(@mainGreenColor, 10%);
+								}
+								&:focus {
+									//									border: none;
+									outline: none;
+									border: none;
+								}
+								&:active {
+									//									border: none;
+									outline: none;
+									border: none;
+									box-shadow: none;
+								}
+							}
+						}
 					}
 					.aside_shopslinks {
 						margin: 0 0 0 15px;
@@ -1090,6 +1154,13 @@ html {
 							}
 						}
 					}
+				}
+				.partnership_pict {
+					flex-basis: 100%;
+					//					background-color: lighten(@mainGrayColor, 11%);
+					margin: 30px 0 0 0;
+					padding: 20px;
+					outline: 1px dotted red;
 				}
 				.contacts {
 					@media @tablet, @l_tablet {

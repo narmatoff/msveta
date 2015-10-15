@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50" height="128">
+    <clipPath id="b">
+        <use xlink:href="#a"/>
+    </clipPath>
+    <defs>
+        <path id="a" fill-rule="evenodd" d="M23.57 80.25c.92 0 1.84-.35 2.54-1.04l12.85-12.73c1.39-1.37 1.39-3.59 0-4.96L26.11 48.79c-1.39-1.38-3.66-1.39-5.06-.02-1.39 1.37-1.4 3.59-.01 4.97L31.39 64 21.04 74.26c-1.39 1.38-1.38 3.6.01 4.97.7.68 1.61 1.02 2.52 1.02z"/>
+    </defs>
+    <path opacity=".7" fill-rule="evenodd" d="M50 128.04C21.28 120.88 0 94.93 0 64 0 33.07 21.28 7.12 50-.04v128.08z"/>
+    <use xlink:href="#a" fill="#FFF"/>
+    <use clip-path="url(#b)" xlink:href="#a" fill="none" stroke="#000" stroke-width="2"/>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selection>
+    <target result="pages">
+        <type id="89" />
+    </target>
+<!-- 
+    <property name="about">
+        <object>{1}</object>
+    </property> -->
+    
+    <property name="on_main_page" value="1"/>
+    <!-- <property name="nash_magaz" mode="not" value="{3}"/> -->
+
+    <extended>
+        <properties>logotip</properties>
+        <!-- <groups>svyaznye_stranicy</groups> -->
+    </extended>
+    <!-- <sort order="ascending">id</sort> -->
+    <limit>5000</limit>
+</selection>

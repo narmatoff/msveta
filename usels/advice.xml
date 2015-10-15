@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selection>
+    <target result="pages">
+    	<type id="60" />
+        <category depth="10">/poleznye_sovety/</category>
+    </target>
+<!-- 
+	<property name="about">
+		<object>{1}</object>
+	</property> -->
+    
+    <!-- <property name="nash_magaz" value="{2}"/>
+    <property name="nash_magaz" mode="not" value="{3}"/>
+ -->
+    <extended>
+        <properties>title, h1, content, menu_pic_a</properties>
+    </extended>
+    <sort order="ascending">id</sort>
+    <limit>{1}</limit>
+</selection>

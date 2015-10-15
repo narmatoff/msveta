@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="140px"
+	 height="139px" viewBox="0 0 140 139" enable-background="new 0 0 140 139" xml:space="preserve">
+<filter  width="100.00%" id="filter0" x="0.00%" y="0.00%" height="100.00%" filterUnits="objectBoundingBox">
+	<feGaussianBlur  in="SourceAlpha" result="igBlurOut" stdDeviation="2.50"></feGaussianBlur>
+	<feFlood  flood-color="rgb(255,255,255)" result="igFloodOut"></feFlood>
+	<feComposite  in2="igBlurOut" operator="out" in="igFloodOut" result="igRawGlow"></feComposite>
+	<feComposite  in2="SourceAlpha" operator="in" in="igRawGlow" result="igRawGlowClipped"></feComposite>
+	<feComponentTransfer  in="igRawGlowClipped" result="innerGlow">
+		<feFuncA  type="linear" slope="1.00"></feFuncA>
+	</feComponentTransfer>
+	<feMerge>
+		<feMergeNode  in="innerGlow"></feMergeNode>
+	</feMerge>
+</filter>
+<g id="Слой_1">
+	<g id="Слой_1_1_">
+		<g>
+			<g>
+				<path id="symbol0" fill="#79AF21" d="M0-10h140v149l-71-20L0,139V-10z"/>
+			</g>
+			<g filter="url(#filter0)">
+				<path id="symbol0_1_" d="M0-10h140v149l-71-20L0,139V-10z"/>
+			</g>
+			<g>
+				<g>
+					<defs>
+						<polygon id="SVGID_1_" points="0,-10 140,-10 140,139 69,119 0,139 						"/>
+					</defs>
+					<clipPath id="SVGID_2_">
+						<use xlink:href="#SVGID_1_"  overflow="visible"/>
+					</clipPath>
+					<g clip-path="url(#SVGID_2_)">
+						<path id="symbol0_2_" fill="none" stroke="#79AF21" stroke-width="6" d="M0-10h140v149l-71-20L0,139V-10z"/>
+					</g>
+				</g>
+			</g>
+		</g>
+		<path fill="#FFFFFF" d="M80,53.78c-28.86,0-53.8,15.4-65.65,37.739c9.53-24.021,34.59-41.181,64.009-41.181
+			c20.229,0,38.391,8.12,50.871,21C116.25,60.44,98.971,53.78,80,53.78z"/>
+		<path fill="#FFFFFF" d="M83.811,91.26C81.63,80.75,81.09,73.57,81.09,73.57c-2.449,7.74-4.359,17.688-4.359,17.688h-4.899
+			c-1.03-5.09-1.9-11.778-2.49-16.868C64.51,84.38,54.39,91.25,42.69,91.25c-1.32,0-2.62-0.1-3.9-0.27C39,90.99,39.21,91,39.42,91
+			c15.04,0,27.24-12.38,27.24-27.66c0-15.27-12.2-27.65-27.24-27.65c-11.65,0-21.59,7.43-25.48,17.89C17.24,40.59,28.86,31,42.69,31
+			c16.39,0,29.68,13.49,29.68,30.12c0,0.1,0,0.2,0,0.29V61.4c1.09,12.44,1.64,20.459,1.64,20.459C76.73,70.8,80,61.96,80,61.96
+			h4.359c0.82,13.82,4.899,29.3,4.899,29.3H83.811z"/>
+	</g>
+</g>
+<g id="Слой_2">
+	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="3.167" y1="134.5" x2="3.167" y2="-10"/>
+	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="3.167" y1="134.5" x2="69.333" y2="115.332"/>
+	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="69.333" y1="115.332" x2="136.584" y2="134.5"/>
+	<line fill="none" stroke="#FFFFFF" stroke-miterlimit="10" x1="136.584" y1="134.5" x2="136.584" y2="-9.584"/>
+</g>
+</svg>

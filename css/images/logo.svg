@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="140" height="139" viewBox="0 0 140 139">
+    <filter width="100%" id="a" x="0%" y="0%" height="100%" filterUnits="objectBoundingBox">
+        <feGaussianBlur in="SourceAlpha" result="igBlurOut" stdDeviation="2.5"/>
+        <feFlood flood-color="#FFF" result="igFloodOut"/>
+        <feComposite in2="igBlurOut" operator="out" in="igFloodOut" result="igRawGlow"/>
+        <feComposite in2="SourceAlpha" operator="in" in="igRawGlow" result="igRawGlowClipped"/>
+        <feComponentTransfer in="igRawGlowClipped" result="innerGlow">
+            <feFuncA type="linear"/>
+        </feComponentTransfer>
+        <feMerge>
+            <feMergeNode in="innerGlow"/>
+        </feMerge>
+    </filter>
+    <path fill="#79AF21" d="M0-10h140v149l-71-20-69 20V-10z"/>
+    <path d="M0-10h140v149l-71-20-69 20V-10z" filter="url(#a)"/>
+    <defs>
+        <path id="b" d="M0-10h140v149l-71-20-69 20z"/>
+    </defs>
+    <clipPath id="c">
+        <use xlink:href="#b" overflow="visible"/>
+    </clipPath>
+    <g clip-path="url(#c)">
+        <path fill="none" stroke="#79AF21" stroke-width="6" d="M0-10h140v149l-71-20-69 20V-10z"/>
+    </g>
+    <path fill="#FFF" d="M80 53.78c-28.86 0-53.8 15.4-65.65 37.74 9.53-24.022 34.59-41.182 64.01-41.182 20.228 0 38.39 8.12 50.87 21C116.25 60.44 98.97 53.78 80 53.78z"/>
+    <path fill="#FFF" d="M83.81 91.26c-2.18-10.51-2.72-17.69-2.72-17.69-2.45 7.74-4.36 17.688-4.36 17.688h-4.898c-1.03-5.09-1.9-11.778-2.49-16.868C64.51 84.38 54.39 91.25 42.69 91.25c-1.32 0-2.62-.1-3.9-.27.21.01.42.02.63.02 15.04 0 27.24-12.38 27.24-27.66 0-15.27-12.2-27.65-27.24-27.65-11.65 0-21.59 7.43-25.48 17.89C17.24 40.59 28.86 31 42.69 31c16.39 0 29.68 13.49 29.68 30.12v.29-.01c1.09 12.44 1.64 20.46 1.64 20.46C76.73 70.8 80 61.96 80 61.96h4.36c.82 13.82 4.898 29.3 4.898 29.3H83.81z"/>
+    <g fill="none" stroke="#FFF" stroke-miterlimit="10">
+        <path d="M3.167 134.5V-10M3.167 134.5l66.166-19.168M69.333 115.332l67.25 19.168M136.584 134.5V-9.584"/>
+    </g>
+</svg>
